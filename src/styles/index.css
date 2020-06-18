@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+
+/* Custom shit eg */
+/* .btn {
+  @apply p-12 bg-blue-500;
+} */
+
+@tailwind utilities;

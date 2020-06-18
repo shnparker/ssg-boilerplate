@@ -1,0 +1,5 @@
+node_modules
+.next
+src/**/*.test*
+src/svg/**
+src/components/svg/**
