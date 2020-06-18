@@ -1,8 +1,8 @@
 module.exports = {
-  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  purge: ['.src/components/**/*.jsx', './pages/**/*.jsx'],
   theme: {
     extend: {},
   },
   variants: {},
-  plugins: [require("@tailwindcss/ui")],
+  plugins: [require('@tailwindcss/ui')],
 };
