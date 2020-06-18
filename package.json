@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn test:once && next build",
-    "analyse:bundle": "ANALYZE_BUNDLE=true yarn start",
+    "build": "next build",
     "start": "next start",
+    "analyse:bundle": "ANALYZE_BUNDLE=true yarn start",
     "lint": "esw src/ -w --ext .js --ext .jsx",
     "lint:once": "eslint src/ --ext .js --ext .jsx",
     "lint:fix": "eslint src/ --ext .js --ext .jsx --fix",
