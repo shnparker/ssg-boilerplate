@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 App.propTypes = {
-  Component: PropTypes.element.isRequired,
+  Component: PropTypes.func.isRequired,
   pageProps: PropTypes.object.isRequired,
 };
 
