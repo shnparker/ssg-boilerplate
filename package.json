@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "svg": "npx @svgr/cli -d src/assets/svg src/components/svg --ext jsx",
     "analyse:bundle": "ANALYZE_BUNDLE=true yarn start",
     "lint": "esw src/ -w --ext .js --ext .jsx",
     "lint:once": "eslint src/ --ext .js --ext .jsx",
@@ -16,23 +17,24 @@
     "packages:upgrade": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
+    "@tailwindcss/ui": "^0.3.0",
     "next": "9.4.4",
+    "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "prop-types": "15.7.2",
-    "tailwindcss": "^1.4.6",
-    "@tailwindcss/ui": "^0.3.0"
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "9.4.4",
+    "@svgr/cli": "^5.4.0",
     "@zeit/next-source-maps": "0.0.4-canary.1",
-    "eslint": "7.2.0",
-    "eslint-plugin-jest": "23.13.2",
-    "eslint-plugin-jsx-a11y": "6.3.0",
+    "dotenv": "8.2.0",
+    "eslint": "7.3.0",
+    "eslint-plugin-jest": "23.16.0",
+    "eslint-plugin-jsx-a11y": "6.3.1",
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "4.0.4",
     "eslint-watch": "7.0.0",
-    "dotenv": "8.2.0",
     "postcss-preset-env": "^6.7.0",
     "vercel": "19.1.1"
   }

@@ -46,19 +46,6 @@ module.exports = withBundleAnalyzer(
         }
       });
 
-      if (isServer) {
-        // Trick to only log once
-        console.debug(
-          `[webpack] Building release "${APP_VERSION_RELEASE}" using NODE_ENV="${
-            process.env.NODE_ENV
-          }" ${
-            process.env.IS_SERVER_INITIAL_BUILD
-              ? 'with IS_SERVER_INITIAL_BUILD="1"'
-              : ''
-          }`
-        );
-      }
-
       // Fixes npm packages that depend on `fs` module
       config.node = {
         fs: 'empty',
