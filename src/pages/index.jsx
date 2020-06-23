@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Home() {
   return (
@@ -14,6 +15,10 @@ export default function Home() {
           <div className="max-w-screen-xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
             <h2 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
               Ready to dive in?
+              <FontAwesomeIcon icon={['fab', 'facebook']}/>
+              <FontAwesomeIcon icon={['fab', 'twitter']}/>
+              <FontAwesomeIcon icon={['fab', 'instagram']}/>
+              <FontAwesomeIcon icon={['fab', 'linkedin']}/>
               <br />
               Start your free trial today.
             </h2>
