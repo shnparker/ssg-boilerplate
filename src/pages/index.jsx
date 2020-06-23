@@ -19,6 +19,7 @@ export default function Home() {
               <FontAwesomeIcon icon={['fab', 'twitter']}/>
               <FontAwesomeIcon icon={['fab', 'instagram']}/>
               <FontAwesomeIcon icon={['fab', 'linkedin']}/>
+              <FontAwesomeIcon icon="spinner" spin/>
               <br />
               Start your free trial today.
             </h2>

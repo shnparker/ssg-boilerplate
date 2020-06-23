@@ -1,30 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+# SSG Boilerplate
+An opinionated boilerplate project that allows rapid development of a SSG/SSR hybrid app. This project is **HEAVILY** inspired by the fantastic work of [Vadorequest](https://github.com/Vadorequest) and his [Next Right Now](https://github.com/UnlyEd/next-right-now) boilerplate. This project aims to replicate production-grade practises, simplify and remove features from that NRN that may not be needed for simpler business use-cases, such as building marketing websites as a freelancer.
 
-## Getting Started
+By creating a boilerplate from scratch using NRN as a reference, the main goal of this project is for me to learn about what NRN offers and adapt it to fit my needs.
 
-First, run the development server:
+## What's in the box
+The following technologies have been pre-configured to "just work". You can simply start developing and reference the individual docs of each library in order to get started, however it is recommended to understand how each of these work and fit together as you progress.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### JS Frameworks & Libraries
+- React
+- Next.js Framework
+- SVGR React Components
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### UI Libraries
+- TailwindCSS (including TailwindUI)
+- FontAwesome Icons
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Developer Experience
+- ESLint
+- Vercel Deployment
 
-## Learn More
+## How does this differ from NRN
+NRN is a far more complete solution and includes technologies that this boilerplate doesn't, such as:
+- Localization
+- Internationalization
+- Multi-tenancy
+- Stages
+- Server technologies (GraphQL)
 
-To learn more about Next.js, take a look at the following resources:
+This boilerplate focuses less on the server-side and more on just having a fantastic SSG experience, but also supports SSR.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
+TODO
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+## Usage
+TODO
 
-## Deploy on Vercel
+## Removing libraries
+[How to remove specific libraries](./docs/remove.md)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
