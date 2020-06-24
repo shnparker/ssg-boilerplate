@@ -7,6 +7,7 @@
   "author": "Shane Parker <shane@sitestack.co.za>",
   "scripts": {
     "dev": "next dev",
+    "debug": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "svg": "npx @svgr/cli -d /assets/svg src/components/icons --ext jsx",
