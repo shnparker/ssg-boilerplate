@@ -1,0 +1,16 @@
+# Optimize speed/size of deployments by not uploading those files
+.idea/
+.vscode/
+node_modules/
+cypress/
+coverage/
+.editorconfig
+.env.build.example
+buildspec.yml
+README.md
+yarn.lock
+yarn-error.log
+
+# Avoid tests being deployed as Vercel Serverless Functions (increases bundle size, and count towards limits)
+src/pages/api/*.test.ts
+src/pages/api/**/*.test.ts

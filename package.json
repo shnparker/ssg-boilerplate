@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Boilerplate for SSG using Next.js and TailwindUI",
   "private": true,
-  "license": "MIT",
   "author": "Shane Parker <shane@sitestack.co.za>",
   "scripts": {
     "dev": "next dev",
@@ -36,11 +35,14 @@
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "dotenv": "8.2.0",
     "eslint": "7.3.1",
-    "eslint-plugin-jest": "23.17.0",
+    "eslint-plugin-jest": "23.17.1",
     "eslint-plugin-jsx-a11y": "6.3.1",
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "4.0.4",
     "eslint-watch": "7.0.0",
+    "jest": "^26.1.0",
+    "jest-expect-message": "1.0.2",
+    "jest-extended": "^0.11.5",
     "postcss-preset-env": "^6.7.0",
     "vercel": "19.1.1"
   }
