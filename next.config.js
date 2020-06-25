@@ -17,7 +17,7 @@ module.exports = withBundleAnalyzer(
       // See https://nextjs.org/docs/api-reference/next.config.js/environment-variables
       // XXX Duplication of the environment variables, this is only used locally
       // while now.json:build:env will be used on the Now platform (See https://vercel.com/docs/v2/build-step/#providing-environment-variables)
-    //   SENTRY_DSN: process.env.SENTRY_DSN,
+      //   SENTRY_DSN: process.env.SENTRY_DSN,
 
       // Dynamic env variables
       NEXT_PUBLIC_BUILD_TIME: date.toString(),
