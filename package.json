@@ -5,15 +5,18 @@
   "private": true,
   "author": "Shane Parker <shane@sitestack.co.za>",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 8000",
     "debug": "NODE_OPTIONS='--inspect' next dev",
-    "build": "next build",
+    "build": "yarn test && next build",
     "start": "next start",
     "svg": "npx @svgr/cli -d /assets/svg src/components/icons --ext jsx",
     "analyse": "ANALYZE_BUNDLE=true yarn start",
     "lint": "eslint src/ --ext .js --ext .jsx --fix",
     "lint:watch": "esw src/ -w --ext .js --ext .jsx",
     "lint:preview": "eslint src/ --ext .js --ext .jsx --fix-dry-run",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watchAll",
+    "test:coverage": "NODE_ENV=test jest --coverage",
     "preversion": "yarn lint && yarn test"
   },
   "dependencies": {
