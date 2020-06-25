@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://sitestack.co.za",
+    "projectId": "4dvdog",
+    "screenshotsFolder": "cypress/screenshots/production",
+    "videosFolder": "cypress/videos/production",
+    "env": {}
+}
