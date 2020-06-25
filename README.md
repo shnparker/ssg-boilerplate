@@ -15,6 +15,10 @@ The following technologies have been pre-configured to "just work". You can simp
 - TailwindCSS (including TailwindUI)
 - FontAwesome Icons
 
+### Testing
+- Jest
+- Cypress
+
 ### Developer Experience
 - ESLint
 - Vercel Deployment
@@ -24,17 +28,23 @@ NRN is a far more complete solution and includes technologies that this boilerpl
 - Localization
 - Internationalization
 - Multi-tenancy
-- Stages
-- Server technologies (GraphQL)
+- Server technologies
 
 This boilerplate focuses less on the server-side and more on just having a fantastic SSG experience, but also supports SSR.
 
-## Installation
-TODO
+## Removing TailwindUI
+All of the packages included have a free tier, except for TailwindUI (the paid UI library of TailwindCSS)
 
-## Usage
-TODO
+If you have not purchased TailwindUI, remove the following lines from your project.
 
-## Removing libraries
-[How to remove specific libraries](./docs/remove.md)
+```javascript 
+// package.json
+"@tailwindcss/ui": "^0.3.0",
+"postcss-preset-env": "^6.7.0",
+```
+```javascript 
+// tailwind.config.js
+plugins: [require('@tailwindcss/ui')], 
+// plugins: [],
+```
 
