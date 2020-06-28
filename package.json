@@ -40,6 +40,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "9.4.4",
     "@svgr/cli": "^5.4.0",
+    "@welldone-software/why-did-you-render": "^4.2.5",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "cypress": "^4.9.0",
     "dotenv": "8.2.0",

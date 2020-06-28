@@ -5,7 +5,7 @@ node_modules/
 cypress/
 coverage/
 .editorconfig
-.env.build.example
+.env.local.example
 buildspec.yml
 README.md
 yarn.lock
