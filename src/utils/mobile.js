@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/node';
 import { isBrowser } from './browser';
 
 /**
