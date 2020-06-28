@@ -5,6 +5,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { faFacebook, faTwitter, faInstagram, faLinkedin  } from '@fortawesome/free-brands-svg-icons';
 import { faHome, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import '../styles/index.css';
+import '../utils/monitoring/sentry';
 
 /**
  * Font Awesome Icons

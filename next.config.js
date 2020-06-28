@@ -15,9 +15,7 @@ module.exports = withBundleAnalyzer(
     env: {
       // XXX All env variables defined in ".env*" files that aren't public (don't start with "NEXT_PUBLIC_") must manually be made available at build time below
       // See https://nextjs.org/docs/api-reference/next.config.js/environment-variables
-      // XXX Duplication of the environment variables, this is only used locally
-      // while now.json:build:env will be used on the Now platform (See https://vercel.com/docs/v2/build-step/#providing-environment-variables)
-      //   SENTRY_DSN: process.env.SENTRY_DSN,
+      SENTRY_DSN: process.env.SENTRY_DSN,
 
       // Dynamic env variables
       NEXT_PUBLIC_BUILD_TIME: date.toString(),
@@ -26,11 +24,6 @@ module.exports = withBundleAnalyzer(
       NEXT_PUBLIC_APP_VERSION: packageJson.version,
     },
     webpack: (config, { isServer, buildId }) => {
-      if (isServer) {
-        // IS_SERVER_INITIAL_BUILD is meant to be defined only at build time and not at run time, and therefore must not be "made public"
-        process.env.IS_SERVER_INITIAL_BUILD = '1';
-      }
-
       const APP_VERSION_RELEASE = `${packageJson.version}_${buildId}`;
       config.plugins.map((plugin, i) => {
         if (plugin.definitions) {
