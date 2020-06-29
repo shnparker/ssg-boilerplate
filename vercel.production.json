@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "scope": "shaneparker@protonmail.com",
+    "env": {},
+    "build": {
+      "env": {
+        "NEXT_PUBLIC_APP_STAGE": "production",
+        "SENTRY_DSN": "@sentry-dsn"
+      }
+    },
+    "public": false
+  }
