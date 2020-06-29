@@ -19,6 +19,9 @@ The following technologies have been pre-configured to "just work". You can simp
 - Jest
 - Cypress
 
+### Monitoring & Analytics
+- Sentry
+
 ### Developer Experience
 - ESLint
 - Vercel Deployment
