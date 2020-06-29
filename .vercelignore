@@ -1,7 +1,6 @@
 # Optimize speed/size of deployments by not uploading those files
 .idea/
 .vscode/
-node_modules/
 cypress/
 coverage/
 .editorconfig
