@@ -11,6 +11,6 @@ describe("isMobile", () => {
     const result = isMobileMock();
 
     expect(isMobileMock, "isMobile was not called.").toHaveBeenCalled();
-    expect(result).toBeUndefined();
+    expect(result).toBe(false);
   });
 });
