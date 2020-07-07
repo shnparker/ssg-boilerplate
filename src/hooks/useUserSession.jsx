@@ -1,5 +1,5 @@
-import React from 'react';
-import userSessionContext from '../stores/userSessionContext';
+import React from "react";
+import userSessionContext from "../stores/userSessionContext";
 
 /**
  * Hook to access the user session data

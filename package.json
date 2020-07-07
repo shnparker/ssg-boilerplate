@@ -11,17 +11,18 @@
     "start": "next start",
     "svg": "npx @svgr/cli -d /assets/svg src/components/icons --ext jsx",
     "analyse": "ANALYZE_BUNDLE=true yarn start",
-    "deploy:staging": "vercel --confirm --local-config=vercel.staging.json --debug",
     "e2e": "cypress run --config-file cypress/config.json",
     "e2e:open": "cypress open --config-file cypress/config.json",
     "e2e:ci": "cypress install && cypress run --record",
+    "format": "prettier \"src/**/*{js,jsx,json,css,html,md}\" --write",
+    "format:preview": "prettier \"src/**/*{js,jsx,json,css,html,md}\"",
     "lint": "eslint src/ --ext .js --ext .jsx --fix",
     "lint:watch": "esw src/ -w --ext .js --ext .jsx",
     "lint:preview": "eslint src/ --ext .js --ext .jsx --fix-dry-run",
     "test": "NODE_ENV=test jest",
     "test:watch": "NODE_ENV=test jest --watchAll",
     "test:coverage": "NODE_ENV=test jest --coverage",
-    "preversion": "yarn lint && yarn test"
+    "preversion": "yarn format && yarn lint && yarn test"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.29",
@@ -46,6 +47,8 @@
     "cypress": "^4.9.0",
     "dotenv": "8.2.0",
     "eslint": "7.3.1",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.22.0",
     "eslint-plugin-jest": "23.17.1",
     "eslint-plugin-jsx-a11y": "6.3.1",
     "eslint-plugin-react": "7.20.0",
@@ -55,6 +58,7 @@
     "jest-expect-message": "1.0.2",
     "jest-extended": "^0.11.5",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
     "vercel": "19.1.1"
   }
 }
