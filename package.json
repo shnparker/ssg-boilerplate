@@ -60,5 +60,8 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.5",
     "vercel": "19.1.1"
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
