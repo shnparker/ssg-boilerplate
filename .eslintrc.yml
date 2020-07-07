@@ -31,6 +31,5 @@ settings:
   import/resolver:
     node:
       extensions:
-      - ".js"
-      - ".jsx"
-    
+        - ".js"
+        - ".jsx"

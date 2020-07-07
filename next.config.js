@@ -1,11 +1,10 @@
-const bundleAnalyzer = require('@next/bundle-analyzer');
-const nextSourceMaps = require('@zeit/next-source-maps');
-const packageJson = require('./package');
+const bundleAnalyzer = require("@next/bundle-analyzer");
+const nextSourceMaps = require("@zeit/next-source-maps");
+const packageJson = require("./package");
 
 const withSourceMaps = nextSourceMaps();
 const withBundleAnalyzer = bundleAnalyzer({
-  // Run with "yarn analyse:bundle" - See https://www.npmjs.com/package/@next/bundle-analyzer
-  enabled: process.env.ANALYZE_BUNDLE === 'true',
+  enabled: process.env.ANALYZE_BUNDLE === "true",
 });
 
 const date = new Date();
@@ -23,28 +22,12 @@ module.exports = withBundleAnalyzer(
       NEXT_PUBLIC_APP_NAME: packageJson.name,
       NEXT_PUBLIC_APP_VERSION: packageJson.version,
     },
-    webpack: (config, { isServer, buildId }) => {
-      const APP_VERSION_RELEASE = `${packageJson.version}_${buildId}`;
-      config.plugins.map((plugin, i) => {
-        if (plugin.definitions) {
-          // If it has a "definitions" key, then we consider it's the DefinePlugin where ENV vars are stored
-          // Dynamically add some "public env" variables that will be replaced during the build through "DefinePlugin"
-          // Those variables are considered public because they are available at build time and at run time (they'll be replaced during initial build, by their value)
-          plugin.definitions[
-            'process.env.NEXT_PUBLIC_APP_BUILD_ID'
-          ] = JSON.stringify(buildId);
-          plugin.definitions[
-            'process.env.NEXT_PUBLIC_APP_VERSION_RELEASE'
-          ] = JSON.stringify(APP_VERSION_RELEASE);
-        }
-      });
-
+    webpack: (config, { isServer }) => {
       // Fixes npm packages that depend on `fs` module
       config.node = {
-        fs: 'empty',
+        fs: "empty",
       };
 
-      // XXX See https://github.com/vercel/next.js/blob/canary/examples/with-sentry-simple/next.config.js
       // In `pages/_app.js`, Sentry is imported from @sentry/node. While
       // @sentry/browser will run in a Node.js environment, @sentry/node will use
       // Node.js-only APIs to catch even more unhandled exceptions.
@@ -55,12 +38,12 @@ module.exports = withBundleAnalyzer(
       //
       // Luckily, Next.js will call this webpack function twice, once for the
       // server and once for the client. Read more:
-      // https://nextjs.org/docs#customizing-webpack-config
+      // https://nextjs.org/docs/api-reference/next.config.js/custom-webpack-config
       //
       // So ask Webpack to replace @sentry/node imports with @sentry/browser when
       // building the browser's bundle
       if (!isServer) {
-        config.resolve.alias['@sentry/node'] = '@sentry/browser';
+        config.resolve.alias["@sentry/node"] = "@sentry/browser";
       }
 
       return config;

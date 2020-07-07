@@ -11,7 +11,6 @@ if (process.env.SENTRY_DSN) {
     dsn: process.env.SENTRY_DSN,
     enabled: process.env.NODE_ENV !== "test",
     environment: process.env.NEXT_PUBLIC_APP_STAGE,
-    release: process.env.NEXT_PUBLIC_APP_VERSION_RELEASE,
   });
 
   // Scope configured by default, subsequent calls to "configureScope" will add additional data
@@ -32,7 +31,6 @@ if (process.env.SENTRY_DSN) {
  */
 export const configureReq = (request) => {
   Sentry.configureScope((scope) => {
-    // https://medium.com/@deepak13245/benchmarking-lodash-get-vs-babel-optional-chaining-and-babel-nullish-coalescing-9f9e76787394
     scope.setTag("host", request?.headers?.host);
     scope.setTag("url", request?.url);
     scope.setTag("method", request?.method);

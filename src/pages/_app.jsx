@@ -42,8 +42,11 @@ if (isBrowser() && process.env.NODE_ENV === "development") {
 App.propTypes = {
   Component: PropTypes.func.isRequired,
   pageProps: PropTypes.object.isRequired,
+  err: PropTypes.object,
 };
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function App({ Component, pageProps, err }) {
+  return <Component {...pageProps} err={err} />;
 }
+
+export default App;

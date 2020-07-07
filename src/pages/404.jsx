@@ -6,7 +6,7 @@ import React from "react";
  * See https://nextjs.org/docs/advanced-features/custom-error-page
  */
 
-const NotFoundError = (props) => {
+function NotFoundError(props) {
   return (
     // <DefaultLayout
     //   {...props}
@@ -24,6 +24,6 @@ const NotFoundError = (props) => {
     </div>
     // </DefaultLayout>
   );
-};
+}
 
 export default NotFoundError;
