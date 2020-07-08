@@ -39,7 +39,7 @@ class CookieManager {
 
   patchCookie(newData) {
     this.updateCookie({
-      ...this.getUserData(),
+      ...this.getCookie(),
       ...newData,
     });
   }
@@ -71,7 +71,7 @@ class CookieManager {
     }
   }
 
-  static clearCookies() {
+  deleteCookies() {
     const cookies = document.cookie.split(";");
 
     for (let i = 0; i < cookies.length; i++) {
