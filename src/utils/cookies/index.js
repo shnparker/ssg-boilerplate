@@ -25,20 +25,20 @@ class CookieManager {
   // COOKIE CRUD
   // ------------------------------
 
-  initializeCookie() {
+  createCookie() {
     const deviceId = uuidv1();
     const userData = {
       id: deviceId, // Replace with userId if app has authentication
       deviceId,
     };
 
-    this.replaceUserData(userData);
+    this.updateCookie(userData);
 
     return userData;
   }
 
   patchCookie(newData) {
-    this.replaceUserData({
+    this.updateCookie({
       ...this.getUserData(),
       ...newData,
     });
@@ -82,7 +82,7 @@ class CookieManager {
     }
   }
 
-  getUserData(serverOptions) {
+  getCookie(serverOptions) {
     let cookieData;
 
     if (isBrowser()) {
@@ -107,14 +107,14 @@ class CookieManager {
 
     // If cookie's undefined, init (first visit)
     if (typeof cookieData === "undefined") {
-      return this.initUserData();
+      return this.createCookie();
     }
 
     try {
       const userData = JSON.parse(cookieData);
 
       if (!userData) {
-        return this.initUserData();
+        return this.createCookie();
       } else {
         return userData;
       }
@@ -128,7 +128,7 @@ class CookieManager {
       console.error(e);
 
       // Data unreadable, creating new data
-      return this.initUserData();
+      return this.createCookie();
     }
   }
 
