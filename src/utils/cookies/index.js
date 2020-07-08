@@ -100,7 +100,7 @@ class CookieManager {
       } else {
         // eslint-disable-next-line no-console
         console.warn(
-          `Calling "getUserData" from the server side, but neither req/res nor readonlyCookies are provided. The server can't read any cookie and will therefore initialise a temporary user session (which won't override actual cookies since we can't access them)`
+          `Calling "getCookie" from the server side, but neither req/res nor readonlyCookies are provided. The server can't read any cookie and will therefore initialise a temporary user session (which won't override actual cookies since we can't access them)`
         );
       }
     }
