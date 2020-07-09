@@ -9,9 +9,9 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faHome, faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { isBrowser } from "../utils/browser";
-import "../styles/index.css";
-import "../utils/monitoring/sentry";
+import { isBrowser } from "@/utils/browser";
+import "@/styles/index.css";
+import "@/utils/monitoring/sentry";
 
 /**
  * Font Awesome Icons

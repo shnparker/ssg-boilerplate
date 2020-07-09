@@ -1,6 +1,6 @@
-import Head from "next/head";
 import React from "react";
-import CookieManager from "../utils/cookies/cookies";
+import Head from "@/components/layout/Head";
+import CookieManager from "@/utils/cookies/cookies";
 
 export default function Home() {
   const cookie = new CookieManager().getCookie();

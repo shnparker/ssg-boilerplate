@@ -33,3 +33,12 @@ settings:
       extensions:
         - ".js"
         - ".jsx"
+    alias:
+      - - "@/components"
+        - "./src/components"
+      - - "@/hooks"
+        - "./src/hooks"
+      - - "@/styles"
+        - "./src/styles"
+      - - "@/utils"
+        - "./src/utils"
