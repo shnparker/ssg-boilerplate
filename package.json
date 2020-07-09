@@ -40,7 +40,8 @@
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "webfontloader": "1.6.28"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "9.4.4",
