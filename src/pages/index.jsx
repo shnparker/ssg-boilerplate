@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "@/components/layout/Head";
-import CookieManager from "@/utils/cookies/cookies";
+import CookieManager from "@/utils/cookies/cookieManager";
 
 export default function Home() {
   const cookie = new CookieManager().getCookie();
