@@ -12,9 +12,9 @@ export const isMobile = () => {
       return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
       );
-    } catch (err) {
-      // logger.error(e.message);
-      Sentry.captureException(err);
+    } catch (e) {
+      console.log(e);
+      Sentry.captureException(e);
     }
   } else {
     return false;

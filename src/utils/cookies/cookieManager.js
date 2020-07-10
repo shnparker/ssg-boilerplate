@@ -67,6 +67,7 @@ class CookieManager {
         serverCookies.set(COOKIE_KEY, JSON.stringify(newData), serverOptions);
       }
     } catch (e) {
+      console.error(e);
       Sentry.captureException(e);
     }
   }
