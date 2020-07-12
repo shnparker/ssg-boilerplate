@@ -65,8 +65,11 @@ plugins: [require('@tailwindcss/ui')],
 TODO after cloning
 
 Font installation
-Path alias
+Path alias (jest/jsconfig/eslint)
 Sentry kry
 Amplitude key / events
 Custom styles
 Custom Svg gen
+
+decisions
+Use v1 for uniqueness - See https://www.sohamkamani.com/blog/2016/10/05/uuid1-vs-uuid4/
