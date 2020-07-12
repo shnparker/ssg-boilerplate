@@ -1,15 +1,12 @@
 import React from "react";
-import Head from "@/components/layout/Head";
-import CookieManager from "@/utils/cookies/cookieManager";
+import Head from "components/layout/Head.jsx";
+import CookieManager from "utils/cookies";
 
 export default function Home() {
   const cookie = new CookieManager().getCookie();
   return (
     <div className="container">
-      <Head>
-        <title>SSG Boilerplate</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Head />
 
       <main className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
         <div className="text-center">

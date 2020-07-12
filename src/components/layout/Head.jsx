@@ -1,4 +1,4 @@
-import { isBrowser } from "../../utils/browser";
+import { isBrowser } from "utils/platform";
 import NextHead from "next/head";
 import React from "react";
 import PropTypes from "prop-types";

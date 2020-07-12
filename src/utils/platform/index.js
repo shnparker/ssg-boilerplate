@@ -1,9 +1,19 @@
+/**
+ * PLATFORM UTILS
+ *
+ * Utils to detect user devices and next.js runtimes
+ */
+
 import * as Sentry from "@sentry/node";
-import { isBrowser } from "./browser";
 
 /**
- * Returns whether running on a mobile device
- *
+ * Checks whether the current runtime is a browser
+ * @return {boolean}
+ */
+export const isBrowser = () => typeof window !== "undefined";
+
+/**
+ * Returns whether current runtime is on a mobile device
  * @return {boolean}
  */
 export const isMobile = () => {

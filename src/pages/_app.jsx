@@ -9,11 +9,16 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faHome, faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { isBrowser } from "@/utils/browser";
+import { isBrowser } from "utils/platform";
 import { v1 as uuidv1 } from "uuid";
-import "@/styles/index.css";
-import { sendWebVitals } from "@/utils/analytics/amplitude";
-import "@/utils/monitoring/sentry";
+import "styles/index.css";
+import { sendWebVitals } from "utils/analytics";
+/**@/utils/monitoring
+ * Helper to avoid duplicating the init() call in every /pages/api file.
+ * Also used in pages/_app for the client side, which automatically applies it for all frontend pages.
+ */
+import "utils/monitoring";
+// * @see https://nextjs.org/blog/next-9-4#integrated-web-vitals-reporting
 
 /**
  * Font Awesome Icons

@@ -1,6 +1,14 @@
+/**
+ * USAGE ANALYTICS
+ *
+ * Implementation and config of Amplitude data analytics
+ * Amplitude requires a key, use 5ea02d86a6840c165fcc01377131fa13 for dummy account
+ * @see https://developers.amplitude.com/docs
+ */
+
 import * as Sentry from "@sentry/node";
-import CookieManager from "../cookies/cookieManager";
-import { isBrowser } from "../browser";
+import CookieManager from "utils/cookies";
+import { isBrowser } from "utils/platform";
 
 // All actions must use action verb (imperative form)
 export const AMPLITUDE_ACTIONS = {
@@ -13,14 +21,7 @@ export const AMPLITUDE_ACTIONS = {
 
 export const getAmplitudeInstance = (props) => {
   if (isBrowser()) {
-    const {
-      customerRef,
-      iframeReferrer,
-      isInIframe,
-      lang,
-      locale,
-      userId,
-    } = props;
+    const { customerRef, iframeReferrer, isInIframe, userId } = props;
 
     Sentry.configureScope((scope) => {
       scope.setTag("iframe", `${isInIframe}`);
@@ -31,7 +32,6 @@ export const getAmplitudeInstance = (props) => {
     const amplitude = require("amplitude-js");
     const amplitudeInstance = amplitude.getInstance();
 
-    // See https://help.amplitude.com/hc/en-us/articles/115001361248#settings-configuration-options
     amplitudeInstance.init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY, null, {
       userId,
       logLevel:
@@ -58,8 +58,6 @@ export const getAmplitudeInstance = (props) => {
 
       // XXX We set all "must-have" properties here (instead of doing it in the "AmplitudeProvider", as userProperties), because react-amplitude will send the next "page-displayed" event BEFORE sending the $identify event
       visitor.setOnce("customer.ref", customerRef);
-      visitor.setOnce("lang", lang);
-      visitor.setOnce("locale", locale);
       visitor.setOnce("iframe", isInIframe);
       visitor.setOnce("iframeReferrer", iframeReferrer);
 
@@ -75,7 +73,6 @@ export const getAmplitudeInstance = (props) => {
 /**
  * Initialise Amplitude and send web-vitals metrics report.
  * @see https://web.dev/vitals/ Essential metrics for a healthy site
- * @see https://nextjs.org/blog/next-9-4#integrated-web-vitals-reporting
  */
 export const sendWebVitals = (report) => {
   try {
@@ -84,14 +81,13 @@ export const sendWebVitals = (report) => {
     const cookieManager = new CookieManager();
     const userData = cookieManager.getUserData();
 
-    // https://help.amplitude.com/hc/en-us/articles/115001361248#settings-configuration-options
     amplitudeInstance.init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY, null, {
       // userId: null,
       userId: userData.id,
       logLevel:
         process.env.NEXT_PUBLIC_APP_STAGE === "production" ? "DISABLE" : "WARN",
       includeGclid: true,
-      includeReferrer: true, // https://help.amplitude.com/hc/en-us/articles/215131888#track-referrers
+      includeReferrer: true,
       includeUtm: true,
       onError: (error) => {
         Sentry.captureException(error);
@@ -99,12 +95,9 @@ export const sendWebVitals = (report) => {
       },
     });
 
-    amplitudeInstance.setVersionName(process.env.NEXT_PUBLIC_APP_VERSION);
-
     amplitudeInstance.logEvent(`report-web-vitals`, {
       app: {
         name: process.env.NEXT_PUBLIC_APP_NAME,
-        version: process.env.NEXT_PUBLIC_APP_VERSION,
         stage: process.env.NEXT_PUBLIC_APP_STAGE,
       },
       page: {
