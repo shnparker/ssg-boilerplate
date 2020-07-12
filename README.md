@@ -61,3 +61,12 @@ If you have not purchased TailwindUI, remove the following lines from your proje
 plugins: [require('@tailwindcss/ui')],
 // plugins: [],
 ```
+
+TODO after cloning
+
+Font installation
+Path alias
+Sentry kry
+Amplitude key / events
+Custom styles
+Custom Svg gen
