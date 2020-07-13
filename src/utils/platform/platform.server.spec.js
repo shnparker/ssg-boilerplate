@@ -11,8 +11,7 @@ describe("isBrowser", () => {
 });
 
 describe("isMobile", () => {
-  test("should be false when  not in a browser", () => {
-    // Changing the user agent is not possible in javascript without overriding the getter for the navigator, which is not something I want to do.
+  test("should be false when not in a browser", () => {
     const isMobileMock = jest.fn(isMobile);
     const result = isMobileMock();
 

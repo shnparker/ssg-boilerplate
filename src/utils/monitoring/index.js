@@ -9,7 +9,6 @@
 import * as Sentry from "@sentry/node";
 import { isBrowser } from "utils/platform";
 
-// Error reporting not required for local environments
 const isEnabled =
   process.env.NODE_ENV !== "test" && process.env.NODE_ENV !== "development";
 

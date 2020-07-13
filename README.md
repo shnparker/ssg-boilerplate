@@ -1,68 +1,93 @@
-# SSG Boilerplate
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h3 align="center">SSG Boilerplate</h3>
 
-An opinionated boilerplate project that allows rapid development of a SSG/SSR hybrid app. This project is **HEAVILY** inspired by the fantastic work of [Vadorequest](https://github.com/Vadorequest) and his [Next Right Now](https://github.com/UnlyEd/next-right-now) boilerplate. This project aims to replicate production-grade practises, simplify and remove features from that NRN that may not be needed for simpler business use-cases, such as building marketing websites as a freelancer.
+  <p align="center">
+    An opinionated boilerplate project that allows rapid development of a SSG/SSR hybrid app meant for marketing web pages.
+<br />
+<br />
+<a href="https://github.com/shnparker/ssg-boilerplate"><strong>Explore the docs »</strong></a>
+<br />
+<br />
+<a href="https://github.com/shnparker/ssg-boilerplate/issues">Report Bug</a>
+·
+<a href="https://github.com/shnparker/ssg-boilerplate/issues">Request Feature</a>
 
-By creating a boilerplate from scratch using NRN as a reference, the main goal of this project is for me to learn about what NRN offers and adapt it to fit my needs.
+  </p>
+</p>
 
-## What's in the box
+<!-- TABLE OF CONTENTS -->
 
-The following technologies have been pre-configured to "just work". You can simply start developing and reference the individual docs of each library in order to get started, however it is recommended to understand how each of these work and fit together as you progress.
+## Table of Contents
 
-### JS Frameworks & Libraries
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-- React
-- Next.js Framework
-- SVGR React Components
+<!-- ABOUT THE PROJECT
 
-### UI Libraries
+## About The Project
 
-- TailwindCSS (including TailwindUI)
-- FontAwesome Icons
+[![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-### Testing
+<!-- Here's a blank template to get started:
+**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
+`github_username`, `repo`, `twitter_handle`, `email` -->
 
-- Jest
-- Cypress
+### Built With
 
-### Monitoring & Analytics
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [SVGR React Components](https://react-svgr.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [TailwindUI](https://tailwindui.com)
+- [FontAwesome Icons](https://fontawesome.com/)
+- [Jest](https://jestjs.io/)
+- [Cypress](https://www.cypress.io/)
+- [Sentry](https://sentry.io)
+- [Amplitude](https://amplitude.com/)
+- [ESLint](https://eslint.org/)
+- [Vercel Deployment](https://vercel.com)
 
-- Sentry
+<!-- GETTING STARTED -->
 
-### Developer Experience
+## Getting Started
 
-- ESLint
-- Vercel Deployment
+To get a local copy up and running follow these simple steps.
 
-## How does this differ from NRN
+### Prerequisites
 
-NRN is a far more complete solution and includes technologies that this boilerplate doesn't, such as:
+This is an example of how to list things you need to use the software and how to install them.
 
-- Localization
-- Internationalization
-- Multi-tenancy
-- Server technologies
+- Node
+- Yarn
 
-This boilerplate focuses less on the server-side and more on just having a fantastic SSG experience, but also supports SSR.
+### Installation
 
-## Removing TailwindUI
+1. Clone the repo
 
-All of the packages included have a free tier, except for TailwindUI (the paid UI library of TailwindCSS)
-
-If you have not purchased TailwindUI, remove the following lines from your project.
-
-```javascript
-// package.json
-"@tailwindcss/ui": "^0.3.0",
-"postcss-preset-env": "^6.7.0",
+```sh
+git clone https://github.com/shnparker/ssg-boilerplate.git
 ```
 
-```javascript
-// tailwind.config.js
-plugins: [require('@tailwindcss/ui')],
-// plugins: [],
+2. Install node modules
+
+```sh
+yarn install
 ```
 
-TODO after cloning
+<!-- USAGE EXAMPLES -->
+
+## TODO Usage
 
 Font installation
 Path alias (jest/jsconfig/eslint)
@@ -71,5 +96,57 @@ Amplitude key / events
 Custom styles
 Custom Svg gen
 
-decisions
-Use v1 for uniqueness - See https://www.sohamkamani.com/blog/2016/10/05/uuid1-vs-uuid4/
+<!-- ROADMAP -->
+
+## Roadmap
+
+See the [open issues](https://github.com/ssg-boilerplate/ssg-boilerplate/issues) for a list of proposed features (and known issues).
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contact
+
+Shane Parker - [@shnparker](https://twitter.com/shnparker) - shane@sitestack.co.za
+
+Project Link: [https://github.com/shnparker/ssg-boilerplate](https://github.com/shnparker/ssg-boilerplate)
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+- [Next Right Now](https://github.com/UnlyEd/next-right-now)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png
