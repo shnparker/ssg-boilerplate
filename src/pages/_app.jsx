@@ -1,3 +1,11 @@
+/**
+ * CUSTOM APP COMPONENT
+ *
+ * Next.js uses the App component to initialize pages.
+ * You can override it and control the page initialization.
+ * @see https://nextjs.org/docs/advanced-features/custom-app
+ */
+
 import React from "react";
 import PropTypes from "prop-types";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
@@ -12,13 +20,8 @@ import { faHome, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { isBrowser } from "utils/platform";
 import { v1 as uuidv1 } from "uuid";
 import "styles/index.css";
-import { sendWebVitals } from "utils/analytics";
-/**@/utils/monitoring
- * Helper to avoid duplicating the init() call in every /pages/api file.
- * Also used in pages/_app for the client side, which automatically applies it for all frontend pages.
- */
 import "utils/monitoring";
-// * @see https://nextjs.org/blog/next-9-4#integrated-web-vitals-reporting
+import { sendWebVitals } from "utils/analytics";
 
 /**
  * Font Awesome Icons
@@ -45,6 +48,7 @@ if (isBrowser() && process.env.NODE_ENV === "development") {
 /**
  * Global variable meant to keep all metrics together, until there are enough to send them in batch as a single report
  */
+
 const globalWebVitalsMetric = {
   reportId: uuidv1(),
   metrics: {},
@@ -52,6 +56,7 @@ const globalWebVitalsMetric = {
 };
 
 /**
+ * Amplitude Analytics
  * Will be called once for every metric that has to be reported.
  *
  * There are, at minimum, 3 metrics being received (Next.js-hydration, FCP and TTFB)
@@ -60,10 +65,6 @@ const globalWebVitalsMetric = {
  * @see https://nextjs.org/blog/next-9-4#integrated-web-vitals-reporting Initial release notes
  */
 export function reportWebVitals(metrics) {
-  if (process.env.NEXT_PUBLIC_APP_STAGE !== "production") {
-    console.debug(metrics);
-  }
-
   const { name } = metrics;
   const count = globalWebVitalsMetric.reportedCount;
   globalWebVitalsMetric.metrics[name] = metrics;
@@ -81,10 +82,6 @@ export function reportWebVitals(metrics) {
   }
 }
 
-/**
- * _app.jsx
- * @see https://nextjs.org/docs/advanced-features/custom-app
- */
 App.propTypes = {
   Component: PropTypes.func.isRequired,
   pageProps: PropTypes.object.isRequired,

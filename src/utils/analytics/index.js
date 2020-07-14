@@ -82,7 +82,6 @@ export const sendWebVitals = (report) => {
     const userData = cookieManager.getUserData();
 
     amplitudeInstance.init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY, null, {
-      // userId: null,
       userId: userData.id,
       logLevel:
         process.env.NEXT_PUBLIC_APP_STAGE === "production" ? "DISABLE" : "WARN",
@@ -108,7 +107,6 @@ export const sendWebVitals = (report) => {
       },
       report,
     });
-    console.debug("report-web-vitals report sent to Amplitude");
   } catch (e) {
     Sentry.captureException(e);
     console.error(e);

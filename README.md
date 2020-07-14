@@ -89,12 +89,13 @@ yarn install
 
 ## TODO Usage
 
-Font installation
+Font installation && fallback font
 Path alias (jest/jsconfig/eslint)
 Sentry kry
 Amplitude key / events
 Custom styles
 Custom Svg gen
+set default head elements
 
 <!-- ROADMAP -->
 

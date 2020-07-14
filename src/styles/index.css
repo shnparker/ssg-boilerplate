@@ -5,4 +5,7 @@
  * Custom styles here
  */
 
+/*With this, instead of not showing any text, it'll show the text using its fallback font, and then show the font once loaded
+@see https://github.com/typekit/webfontloader#custom */
+
 @tailwind utilities;
