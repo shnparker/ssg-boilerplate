@@ -17,9 +17,10 @@ AppError.propTypes = {
   statusCode: PropTypes.string.isRequired,
   hasGetInitialPropsRun: PropTypes.bool.isRequired,
   err: PropTypes.object.isRequired,
+  children: PropTypes.number,
 };
 
-function AppError({ statusCode, hasGetInitialPropsRun, err }) {
+function AppError({ statusCode, hasGetInitialPropsRun, err, children = null }) {
   console.error(err);
 
   if (!hasGetInitialPropsRun && err) {
@@ -29,7 +30,9 @@ function AppError({ statusCode, hasGetInitialPropsRun, err }) {
     Sentry.captureException(err);
   }
 
-  return (
+  return children ? (
+    children
+  ) : (
     <NextErrorComponent
       statusCode={statusCode}
       title={

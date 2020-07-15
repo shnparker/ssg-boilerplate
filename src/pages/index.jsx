@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "components/layout/Head.jsx";
+import Head from "components/layout/Head";
 import CookieManager from "utils/cookies";
 
 export default function Home() {
