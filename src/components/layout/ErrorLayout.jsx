@@ -1,6 +1,7 @@
 /**
- * ERROR SCAFFOLDING
+ * ERROR SCAFFOLDING COMPONENT
  *
+ * Provides friendly UI to end users
  * Adds debug info on non-production environments
  */
 

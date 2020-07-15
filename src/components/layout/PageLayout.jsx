@@ -1,5 +1,5 @@
 /**
- * PAGE SCAFFOLDING
+ * PAGE SCAFFOLDING COMPONENT
  *
  * Adds nav/footer components to the page
  * Adds analytics to the page
@@ -8,7 +8,6 @@
 
 import * as Sentry from "@sentry/node";
 import { Amplitude, LogOnMount } from "@amplitude/react-amplitude";
-import classnames from "classnames";
 import React from "react";
 import PropTypes from "prop-types";
 import ErrorLayout from "components/layout/ErrorLayout";
@@ -49,7 +48,7 @@ function PageLayout(props) {
 
       <Nav />
 
-      <div className={classnames("page-wrapper")}>
+      <div>
         {error ? (
           <ErrorPage statusCode={500} isReadyToRender={true} err={error}>
             <ErrorLayout error={error} />
