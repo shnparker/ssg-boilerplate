@@ -8,25 +8,25 @@
  */
 
 import React from "react";
-// import DefaultLayout from '../components/pageLayouts/DefaultLayout';
+import PageLayout from "components/layout/PageLayout";
 
 function NotFoundError(props) {
   return (
-    // <DefaultLayout
-    //   {...props}
-    //   pageName={"404"}
-    //   headProps={{
-    //     title: "404 Not Found - Next Right Now",
-    //   }}
-    // >
-    <div {...props}>
-      <>
-        <h1>Page not found</h1>
+    <PageLayout
+      {...props}
+      pageName={"404"}
+      headProps={{
+        title: "Page not found",
+      }}
+    >
+      <div {...props}>
+        <>
+          <h1>Page not found</h1>
 
-        <p>The page you&apos;re looking for doesn&apos;t exist</p>
-      </>
-    </div>
-    // </DefaultLayout>
+          <p>The page you&apos;re looking for doesn&apos;t exist</p>
+        </>
+      </div>
+    </PageLayout>
   );
 }
 

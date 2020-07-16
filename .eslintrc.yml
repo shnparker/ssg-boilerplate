@@ -31,16 +31,17 @@ settings:
     version: detect
   import/resolver:
     alias:
-      - - "pages"
-        - "./src/pages"
-      - - "components"
-        - "./src/components"
-      - - "hooks"
-        - "./src/hooks"
-      - - "styles"
-        - "./src/styles"
-      - - "utils"
-        - "./src/utils"
+      map:
+        - - pages
+          - "./src/pages"
+        - - components
+          - "./src/components"
+        - - hooks
+          - "./src/hooks"
+        - - styles
+          - "./src/styles"
+        - - utils
+          - "./src/utils"
       extensions:
-        - .js
-        - .jsx
+        - ".js"
+        - ".jsx"

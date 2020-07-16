@@ -12,9 +12,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import ErrorLayout from "components/layout/ErrorLayout";
 import ErrorPage from "pages/_error";
-import Head from "./Head";
-import Nav from "./Nav";
-import Footer from "./Footer";
+import Head from "components/layout/Head";
+import Nav from "components/layout/Nav";
+import Footer from "components/layout/Footer";
 
 PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
