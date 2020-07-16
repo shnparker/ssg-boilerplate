@@ -24,7 +24,7 @@ import "utils/monitoring";
 import { sendWebVitals, getAmplitudeInstance } from "utils/analytics";
 import * as Sentry from "@sentry/node";
 import { AmplitudeProvider } from "@amplitude/react-amplitude";
-import UserSessionContext from "stores/UserSessionContext";
+import UserSessionContext from "stores/userSessionContext";
 import CookieManager from "utils/cookies";
 
 /**
