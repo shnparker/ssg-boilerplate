@@ -38,6 +38,8 @@ settings:
           - "./src/components"
         - - hooks
           - "./src/hooks"
+        - - stores
+          - "./src/stores"
         - - styles
           - "./src/styles"
         - - utils

@@ -21,7 +21,11 @@ import { isBrowser } from "utils/platform";
 import { v1 as uuidv1 } from "uuid";
 import "styles/index.css";
 import "utils/monitoring";
-import { sendWebVitals } from "utils/analytics";
+import { sendWebVitals, getAmplitudeInstance } from "utils/analytics";
+import * as Sentry from "@sentry/node";
+import { AmplitudeProvider } from "@amplitude/react-amplitude";
+import UserSessionContext from "stores/UserSessionContext";
+import CookieManager from "utils/cookies";
 
 /**
  * Font Awesome Icons
@@ -89,7 +93,48 @@ App.propTypes = {
 };
 
 function App({ Component, pageProps, err }) {
-  return <Component {...pageProps} err={err} />;
+  Sentry.addBreadcrumb({
+    category: "pages/_app",
+    message: `Rendering _app`,
+    level: Sentry.Severity.Debug,
+  });
+
+  const cookiesManager = new CookieManager();
+  const userSession = cookiesManager.getCookie();
+  const userId = userSession.id;
+  const injectedPageProps = {
+    pageProps,
+    cookiesManager,
+    userSession,
+  };
+
+  Sentry.addBreadcrumb({
+    category: "components/pages/AppBrowserPage",
+    message: `Rendering AppBrowserPage`,
+    level: Sentry.Severity.Debug,
+  });
+
+  const amplitudeInstance = getAmplitudeInstance({ userId });
+
+  if (isBrowser()) {
+    return (
+      <AmplitudeProvider
+        amplitudeInstance={amplitudeInstance}
+        apiKey={process.env.NEXT_PUBLIC_AMPLITUDE_KEY}
+        userId={userId}
+      >
+        <UserSessionContext.Provider value={{ ...userSession }}>
+          <Component {...injectedPageProps} error={err} />
+        </UserSessionContext.Provider>
+      </AmplitudeProvider>
+    );
+  }
+
+  return (
+    <UserSessionContext.Provider value={{ ...userSession }}>
+      <Component {...injectedPageProps} error={err} />
+    </UserSessionContext.Provider>
+  );
 }
 
 export default App;

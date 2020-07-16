@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "components/layout/Head";
-import CookieManager from "utils/cookies";
-
+import useUserSession from "../hooks/useUserSession";
+import DisplayOnMount from "components/shared/DisplayOnMount";
 export default function Home() {
-  const cookie = new CookieManager().getCookie();
+  const user = useUserSession();
   return (
     <div className="container">
       <Head />
@@ -17,7 +17,7 @@ export default function Home() {
             </span>
           </h2>
           <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            {JSON.stringify(cookie)}
+            <DisplayOnMount>{JSON.stringify(user)}</DisplayOnMount>
           </p>
           <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
             <div className="rounded-md shadow">

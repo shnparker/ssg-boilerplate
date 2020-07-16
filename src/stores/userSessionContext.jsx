@@ -8,6 +8,6 @@
 import React from "react";
 
 const initialContext = {};
-const userSessionContext = React.createContext(initialContext);
+const UserSessionContext = React.createContext(initialContext);
 
-export default userSessionContext;
+export default UserSessionContext;

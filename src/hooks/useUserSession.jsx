@@ -7,10 +7,10 @@
  */
 
 import React from "react";
-import userSessionContext from "../stores/userSessionContext";
+import UserSessionContext from "../stores/UserSessionContext";
 
 const useUserSession = () => {
-  const context = React.useContext(userSessionContext);
+  const context = React.useContext(UserSessionContext);
 
   if (typeof context === "undefined") {
     throw new Error("useUserSession must be used within UserSessionProvider");
