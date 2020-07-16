@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "components/layout/Head";
-import useUserSession from "../hooks/useUserSession";
+import useUserSession from "hooks/useUserSession";
 import DisplayOnMount from "components/shared/DisplayOnMount";
 export default function Home() {
   const user = useUserSession();

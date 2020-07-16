@@ -7,7 +7,7 @@
  */
 
 import React from "react";
-import UserSessionContext from "../stores/UserSessionContext";
+import UserSessionContext from "stores/UserSessionContext";
 
 const useUserSession = () => {
   const context = React.useContext(UserSessionContext);
