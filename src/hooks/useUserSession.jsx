@@ -1,18 +1,22 @@
-import React from "react";
-import userSessionContext from "../stores/userSessionContext";
-
 /**
- * Hook to access the user session data
+ * USER SESSION HOOK
  *
- * Uses userSessionContext internally (provides an identical API)
- *
- * This hook should be used by components in favor of userSessionContext directly,
- * because it grants higher flexibility if you ever need to change the implementation (e.g: use something else than React.Context, like Redux/MobX)
- *
+ * Getter hook to access the current user store.
+ * Separated from user store to abstract implementation details.
  * @see https://slides.com/djanoskova/react-context-api-create-a-reusable-snackbar#/11
  */
+
+import React from "react";
+import UserSessionContext from "stores/userSessionContext";
+
 const useUserSession = () => {
-  return React.useContext(userSessionContext);
+  const context = React.useContext(UserSessionContext);
+
+  if (typeof context === "undefined") {
+    throw new Error("useUserSession must be used within UserSessionProvider");
+  }
+
+  return context;
 };
 
 export default useUserSession;

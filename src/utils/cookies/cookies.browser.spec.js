@@ -2,14 +2,14 @@
  * @jest-environment jsdom
  */
 
-import CookieManager from "./cookies";
+import CookieManager from "utils/cookies";
 
 const cookieManager = new CookieManager();
 
 describe(`Cookie Manager`, () => {
   describe(`browser`, () => {
     beforeEach(() => {
-      cookieManager.deleteCookies(); // Reset cookies between each test to avoid "overflow"
+      cookieManager.deleteCookies();
     });
 
     describe(`constructor`, () => {

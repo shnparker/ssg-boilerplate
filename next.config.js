@@ -1,6 +1,13 @@
+/**
+ * NEXT.JS CONFIG
+ *
+ * It gets used by the Next.js server and build phases, and it's not included in the browser build.
+ * will not be parsed by Webpack, Babel or TypeScript
+ * @see https://nextjs.org/docs/api-reference/next.config.js/introduction
+ */
+
 const bundleAnalyzer = require("@next/bundle-analyzer");
 const nextSourceMaps = require("@zeit/next-source-maps");
-const packageJson = require("./package");
 
 const withSourceMaps = nextSourceMaps();
 const withBundleAnalyzer = bundleAnalyzer({
@@ -11,17 +18,19 @@ const date = new Date();
 
 module.exports = withBundleAnalyzer(
   withSourceMaps({
+    // Dynamic environment variables
     env: {
-      // XXX All env variables defined in ".env*" files that aren't public (don't start with "NEXT_PUBLIC_") must manually be made available at build time below
-      // See https://nextjs.org/docs/api-reference/next.config.js/environment-variables
-      SENTRY_DSN: process.env.SENTRY_DSN,
-
-      // Dynamic env variables
       NEXT_PUBLIC_BUILD_TIME: date.toString(),
       NEXT_PUBLIC_BUILD_TIMESTAMP: +date,
-      NEXT_PUBLIC_APP_NAME: packageJson.name,
-      NEXT_PUBLIC_APP_VERSION: packageJson.version,
     },
+    /*
+     * WEBPACK CONFIG
+     
+     * The webpack function is executed twice, once for the server and once for the client. 
+     * This allows you to distinguish between client and server configuration using the isServer property
+     * @see https://nextjs.org/docs/api-reference/next.config.js/custom-webpack-config
+     */
+
     webpack: (config, { isServer }) => {
       // Fixes npm packages that depend on `fs` module
       config.node = {
@@ -37,11 +46,8 @@ module.exports = withBundleAnalyzer(
       // executed by a browser.
       //
       // Luckily, Next.js will call this webpack function twice, once for the
-      // server and once for the client. Read more:
-      // https://nextjs.org/docs/api-reference/next.config.js/custom-webpack-config
-      //
-      // So ask Webpack to replace @sentry/node imports with @sentry/browser when
-      // building the browser's bundle
+      // server and once for the client. So ask Webpack to replace @sentry/node
+      // imports with @sentry/browser when building the browser's bundle
       if (!isServer) {
         config.resolve.alias["@sentry/node"] = "@sentry/browser";
       }

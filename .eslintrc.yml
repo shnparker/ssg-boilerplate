@@ -8,6 +8,7 @@ env:
 extends:
   - eslint:recommended
   - plugin:import/errors
+  - plugin:import/warnings
   - plugin:react/recommended
   - plugin:jsx-a11y/recommended
   - prettier
@@ -29,7 +30,20 @@ settings:
   react:
     version: detect
   import/resolver:
-    node:
+    alias:
+      map:
+        - - pages
+          - "./src/pages"
+        - - components
+          - "./src/components"
+        - - hooks
+          - "./src/hooks"
+        - - stores
+          - "./src/stores"
+        - - styles
+          - "./src/styles"
+        - - utils
+          - "./src/utils"
       extensions:
         - ".js"
         - ".jsx"

@@ -1,27 +1,27 @@
+/**
+ * 500 ERROR PAGE
+ *
+ * By default Next.js provides a 500 error page that matches the default 404 page’s style.
+ * This page is not statically optimized as it allows server-side errors to be reported.
+ * This is why 404 and 500 (other errors) are separated.
+ * @see https://nextjs.org/docs/advanced-features/custom-error-page
+ * @see https://github.com/vercel/next.js/blob/canary/examples/with-sentry/pages/_error.js
+ */
+
 import * as Sentry from "@sentry/node";
 import NextErrorComponent from "next/error";
 import React from "react";
 import PropTypes from "prop-types";
 
-/**
- * _error.jsx
- * @see https://github.com/vercel/next.js/blob/canary/examples/with-sentry/pages/_error.js
- * @see https://github.com/vercel/next.js/discussions/12913 Discussion about hybrid SSG/SSR apps considerations
- */
-
 AppError.propTypes = {
   statusCode: PropTypes.string.isRequired,
   hasGetInitialPropsRun: PropTypes.bool.isRequired,
   err: PropTypes.object.isRequired,
+  children: PropTypes.number,
 };
 
-function AppError({ statusCode, hasGetInitialPropsRun, err }) {
-  if (process.env.NEXT_PUBLIC_APP_STAGE !== "production") {
-    console.debug(
-      "AppError - Unexpected error caught, it was captured and sent to Sentry. Error details:"
-    );
-    console.error(err);
-  }
+function AppError({ statusCode, hasGetInitialPropsRun, err, children = null }) {
+  console.error(err);
 
   if (!hasGetInitialPropsRun && err) {
     // getInitialProps is not called in case of
@@ -30,11 +30,11 @@ function AppError({ statusCode, hasGetInitialPropsRun, err }) {
     Sentry.captureException(err);
   }
 
-  return (
+  return children ? (
+    children
+  ) : (
     <NextErrorComponent
       statusCode={statusCode}
-      // Only display title in non-production stages, to avoid leaking debug information to end-users
-      // When "null" is provided, it'll fallback to Next.js default message (based on the statusCode)
       title={
         process.env.NEXT_PUBLIC_APP_STAGE !== "production"
           ? err?.message ?? null
@@ -44,7 +44,7 @@ function AppError({ statusCode, hasGetInitialPropsRun, err }) {
   );
 }
 
-AppError.getInitialProps = async ({ res, err, asPath }) => {
+AppError.getInitialProps = async ({ res, err }) => {
   const errorInitialProps = await NextErrorComponent.getInitialProps({
     res,
     err,
@@ -67,21 +67,15 @@ AppError.getInitialProps = async ({ res, err, asPath }) => {
   //    Boundary. Read more about what types of exceptions are caught by Error
   //    Boundaries: https://reactjs.org/docs/error-boundaries.html
 
+  // Opinionated: do not record an exception in Sentry for 404
   if (res?.statusCode === 404) {
-    // Opinionated: do not record an exception in Sentry for 404
     return { statusCode: 404 };
   }
+
   if (err) {
     Sentry.captureException(err);
     return errorInitialProps;
   }
-
-  // If this point is reached, getInitialProps was called without any
-  // information about what the error might be. This is unexpected and may
-  // indicate a bug introduced in Next.js, so record it in Sentry
-  Sentry.captureException(
-    new Error(`_error.js getInitialProps missing data at path: ${asPath}`)
-  );
 
   return errorInitialProps;
 };

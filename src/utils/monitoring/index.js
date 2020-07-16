@@ -1,23 +1,27 @@
-import * as Sentry from "@sentry/node";
-import { isBrowser } from "../browser";
+/**
+ * ERROR MONITORING
+ *
+ * Implementation and config of Sentry error monitoring
+ * Sentry monitoring is optional and will not break if env key not present
+ * @see https://docs.sentry.io/
+ */
 
-// Don't initialise Sentry if SENTRY_DSN isn't defined (won't crash the app, usage of the Sentry lib is resilient to this and doesn't cause any issue)
+import * as Sentry from "@sentry/node";
+import { isBrowser } from "utils/platform";
+
+const isEnabled =
+  process.env.NODE_ENV !== "test" && process.env.NODE_ENV !== "development";
+
 if (process.env.SENTRY_DSN) {
-  /**
-   * Helper to avoid duplicating the init() call in every /pages/api file.
-   * Also used in pages/_app for the client side, which automatically applies it for all frontend pages.
-   */
   Sentry.init({
     dsn: process.env.SENTRY_DSN,
-    enabled: process.env.NODE_ENV !== "test",
+    enabled: isEnabled,
     environment: process.env.NEXT_PUBLIC_APP_STAGE,
   });
 
-  // Scope configured by default, subsequent calls to "configureScope" will add additional data
+  // Default scope, additional calls to "configureScope" will add additional data
   Sentry.configureScope((scope) => {
-    // See https://www.npmjs.com/package/@sentry/node
     scope.setTag("appName", process.env.NEXT_PUBLIC_APP_NAME);
-    scope.setTag("appVersion", process.env.NEXT_PUBLIC_APP_VERSION);
     scope.setTag("nodejs", process.version);
     scope.setTag("runtimeEngine", isBrowser() ? "browser" : "server");
     scope.setTag("buildTime", process.env.NEXT_PUBLIC_BUILD_TIME);
@@ -26,7 +30,6 @@ if (process.env.SENTRY_DSN) {
 
 /**
  * Configure the Sentry scope by extracting useful tags and context from the given request.
- *
  * @param req
  */
 export const configureReq = (request) => {
