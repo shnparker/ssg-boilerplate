@@ -48,11 +48,11 @@
   "devDependencies": {
     "@next/bundle-analyzer": "9.4.4",
     "@svgr/cli": "^5.4.0",
-    "@welldone-software/why-did-you-render": "^4.2.5",
+    "@welldone-software/why-did-you-render": "^4.2.6",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "cypress": "^4.10.0",
     "dotenv": "8.2.0",
-    "eslint": "7.4.0",
+    "eslint": "7.5.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "2.22.0",
