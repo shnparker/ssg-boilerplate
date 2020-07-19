@@ -87,21 +87,33 @@ yarn install
 
 <!-- USAGE EXAMPLES -->
 
-## TODO Usage
+## Usage
 
-Font installation && fallback font
-Path alias (jest/jsconfig/eslint)
-Sentry kry
-Amplitude key / events
-Custom styles
-Custom Svg gen
-set default head elements
+The boilerplate is set up to work seamlessly so that you can just start adding components.
+The only requirement is to plug in the following customizations:
+
+- [Fonts](docs-fonts)
+- [Alias paths](docs-alias)
+- [Environment variables](docs-env)
+- [Default head](docs-defaults)
+- [SVG Generation](docs-svg)
+
+When everything is set, run the app.
+
+```sh
+yarn dev
+```
+
+## Deployment
+
+Zero-configuration deployment when deploying Next.js projects to Vercel.
+See [Deploying Next.js with Vercel(https://vercel.com/guides/deploying-nextjs-with-vercel)
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the [open issues](https://github.com/ssg-boilerplate/ssg-boilerplate/issues) for a list of proposed features (and known issues).
+See the [open issues](issues-url) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -125,29 +137,29 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Shane Parker - [@shnparker](https://twitter.com/shnparker) - shane@sitestack.co.za
+Shane Parker - [@shnparker](twitter-url) - [shane@sitestack.co.za](email-url)
 
-Project Link: [https://github.com/shnparker/ssg-boilerplate](https://github.com/shnparker/ssg-boilerplate)
+Project Link: [https://github.com/shnparker/ssg-boilerplate](repo-url)
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## Acknowledgements
 
 - [Next Right Now](https://github.com/UnlyEd/next-right-now)
+- [Best-README-template](https://github.com/othneildrew/Best-README-Template)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[twitter-url]: https://twitter.com/shnparker
+[email-url]: mailto:shane@sitestack.co.za
+[repo-url]: https://github.com/ssg-boilerplate/ssg-boilerplate/
+[issues-url]: https://github.com/ssg-boilerplate/ssg-boilerplate/issues
+
+<!-- Docs -->
+
+[docs-fonts]: docs/fonts.md
+[docs-alias]: docs/alias.md
+[docs-svg]: docs/svg.md
+[docs-defaults]: docs/defaults.md
+[docs-env]: docs/env.md

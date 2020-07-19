@@ -2,10 +2,14 @@
 @tailwind components;
 
 /**
- * Custom styles here
+ * CUSTOM STYLES
  */
 
-/*With this, instead of not showing any text, it'll show the text using its fallback font, and then show the font once loaded
-@see https://github.com/typekit/webfontloader#custom */
+/* With this, instead of not showing any text, it'll show the text using its fallback font, and then show the font once loaded */
+/* @see https://github.com/typekit/webfontloader#custom */
+
+html:not(.wf-active) {
+  font-family: "Arial", sans-serif;
+}
 
 @tailwind utilities;
