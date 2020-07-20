@@ -20,7 +20,6 @@ PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
   headProps: PropTypes.object.isRequired,
   pageName: PropTypes.string.isRequired,
-  isInIframe: PropTypes.bool,
   error: PropTypes.object,
 };
 

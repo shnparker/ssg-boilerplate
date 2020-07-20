@@ -40,7 +40,6 @@ export const getAmplitudeInstance = (props) => {
 
     // We're only doing this when detecting a new session, as it won't be executed multiple times for the same session anyway, and it avoids noise
     if (amplitudeInstance.isNewSession()) {
-      // Store whether the visitor originally came from an iframe (and from where)
       const visitor = new amplitudeInstance.Identify();
       amplitudeInstance.identify(visitor);
     }
