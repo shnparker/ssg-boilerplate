@@ -1,18 +1,18 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h3 align="center">SSG Boilerplate</h3>
+  <h3 align="center">Next.js Boilerplate</h3>
 
   <p align="center">
     An opinionated boilerplate project that allows rapid development of a SSG/SSR hybrid app meant for marketing web pages.
 <br />
 <br />
-<a href="https://github.com/shnparker/ssg-boilerplate"><strong>Explore the docs »</strong></a>
+<a href="https://github.com/shnparker/nextjs-boilerplate"><strong>Explore the docs »</strong></a>
 <br />
 <br />
-<a href="https://github.com/shnparker/ssg-boilerplate/issues">Report Bug</a>
+<a href="https://github.com/shnparker/nextjs-boilerplate/issues">Report Bug</a>
 ·
-<a href="https://github.com/shnparker/ssg-boilerplate/issues">Request Feature</a>
+<a href="https://github.com/shnparker/nextjs-boilerplate/issues">Request Feature</a>
 
   </p>
 </p>
@@ -76,7 +76,7 @@ This is an example of how to list things you need to use the software and how to
 1. Clone the repo
 
 ```sh
-git clone https://github.com/shnparker/ssg-boilerplate.git
+git clone https://github.com/shnparker/nextjs-boilerplate.git
 ```
 
 2. Install node modules
@@ -139,7 +139,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Shane Parker - [@shnparker](twitter-url) - [shane@sitestack.co.za](email-url)
 
-Project Link: [https://github.com/shnparker/ssg-boilerplate](repo-url)
+Project Link: [https://github.com/shnparker/nextjs-boilerplate](repo-url)
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -153,8 +153,8 @@ Project Link: [https://github.com/shnparker/ssg-boilerplate](repo-url)
 
 [twitter-url]: https://twitter.com/shnparker
 [email-url]: mailto:shane@sitestack.co.za
-[repo-url]: https://github.com/ssg-boilerplate/ssg-boilerplate/
-[issues-url]: https://github.com/ssg-boilerplate/ssg-boilerplate/issues
+[repo-url]: https://github.com/shnparker/nextjs-boilerplate
+[issues-url]: https://github.com/shnparker/nextjs-boilerplate/issues
 
 <!-- Docs -->
 
