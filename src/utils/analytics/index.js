@@ -65,7 +65,7 @@ export const sendWebVitals = (report) => {
       userId: userData.id,
       logLevel:
         process.env.NEXT_PUBLIC_APP_STAGE === "production" ? "DISABLE" : "WARN",
-      includeGclid: true,
+      includeGclid: false,
       includeReferrer: true,
       includeUtm: true,
       onError: (error) => {
