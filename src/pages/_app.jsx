@@ -103,7 +103,7 @@ function App({ Component, pageProps, err }) {
   const userSession = cookiesManager.getCookie();
   const userId = userSession.id;
   const injectedPageProps = {
-    pageProps,
+    ...pageProps,
     cookiesManager,
     userSession,
   };
