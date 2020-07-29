@@ -7,7 +7,7 @@
  */
 
 import * as Sentry from "@sentry/node";
-import CookieManager from "utils/cookies";
+import CookieManager from "utils/cookies/manager";
 import { isBrowser } from "utils/platform";
 
 // All actions must use action verb (imperative form)
@@ -21,7 +21,8 @@ export const AMPLITUDE_ACTIONS = {
 
 export const getAmplitudeInstance = (props) => {
   if (isBrowser()) {
-    const { userId } = props;
+    const { userId, userConsent } = props;
+    const { hasConsentedCookies, hasConsentedAnalytics } = userConsent;
     const amplitude = require("amplitude-js");
     const amplitudeInstance = amplitude.getInstance();
 
@@ -38,9 +39,20 @@ export const getAmplitudeInstance = (props) => {
       },
     });
 
+    if (!hasConsentedAnalytics) {
+      amplitudeInstance.setOptOut(true);
+    }
+    {
+      // user changed his mind
+      amplitudeInstance.setOptOut(false);
+    }
+
     // We're only doing this when detecting a new session, as it won't be executed multiple times for the same session anyway, and it avoids noise
     if (amplitudeInstance.isNewSession()) {
       const visitor = new amplitudeInstance.Identify();
+
+      visitor.set("hasConsentedCookies", hasConsentedCookies);
+      visitor.set("hasConsentedAnalytics", hasConsentedAnalytics);
       amplitudeInstance.identify(visitor);
     }
 
