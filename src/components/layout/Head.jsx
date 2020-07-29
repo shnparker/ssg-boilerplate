@@ -13,7 +13,7 @@ import { isBrowser } from "utils/platform";
 Head.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  url: PropTypes.string,
+  ogUrl: PropTypes.string,
   ogImage: PropTypes.string,
   favicon: PropTypes.string,
   additionalContent: PropTypes.node,
@@ -30,7 +30,7 @@ function Head(props) {
     title = defaultTitle,
     description = defaultDescription,
     ogImage = defaultOGURL,
-    url = defaultOGImage,
+    ogUrl = defaultOGImage,
     favicon = defaultFavicon,
     additionalContent,
   } = props;
@@ -54,10 +54,10 @@ function Head(props) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href={favicon} />
 
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={ogUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta name="twitter:site" content={url} />
+      <meta name="twitter:site" content={ogUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image" content={ogImage} />
       <meta property="og:image" content={ogImage} />
