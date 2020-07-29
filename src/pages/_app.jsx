@@ -24,8 +24,11 @@ import "utils/monitoring";
 import { sendWebVitals, getAmplitudeInstance } from "utils/analytics";
 import * as Sentry from "@sentry/node";
 import { AmplitudeProvider } from "@amplitude/react-amplitude";
+import UserConsentContext from "stores/userConsentContext";
 import UserSessionContext from "stores/userSessionContext";
-import CookieManager from "utils/cookies";
+import initCookieConsent, { getUserConsent } from "utils/cookies/consent";
+import "cookieconsent/build/cookieconsent.min.css";
+import CookieManager from "utils/cookies/manager";
 
 /**
  * Font Awesome Icons
@@ -102,21 +105,25 @@ function App({ Component, pageProps, err }) {
   const cookiesManager = new CookieManager();
   const userSession = cookiesManager.getCookie();
   const userId = userSession.id;
+  const userConsent = getUserConsent();
+  const amplitudeInstance = getAmplitudeInstance({ userId, userConsent });
   const injectedPageProps = {
     ...pageProps,
     cookiesManager,
     userSession,
   };
 
-  Sentry.addBreadcrumb({
-    category: "components/pages/AppBrowserPage",
-    message: `Rendering AppBrowserPage`,
-    level: Sentry.Severity.Debug,
-  });
-
-  const amplitudeInstance = getAmplitudeInstance({ userId });
-
   if (isBrowser()) {
+    initCookieConsent({
+      // allowedPages: [
+      //   // We only allow it on those 2 pages to avoid display that boring popup on every page
+      //   `${window.location.origin}/${locale}/terms`,
+      //   `${window.location.origin}/${locale}/examples/built-in-features/cookies-consent`,
+      // ],
+      amplitudeInstance,
+      userConsent,
+    });
+
     return (
       <AmplitudeProvider
         amplitudeInstance={amplitudeInstance}
@@ -124,7 +131,9 @@ function App({ Component, pageProps, err }) {
         userId={userId}
       >
         <UserSessionContext.Provider value={{ ...userSession }}>
-          <Component {...injectedPageProps} error={err} />
+          <UserConsentContext.Provider value={{ ...userConsent }}>
+            <Component {...injectedPageProps} error={err} />
+          </UserConsentContext.Provider>
         </UserSessionContext.Provider>
       </AmplitudeProvider>
     );

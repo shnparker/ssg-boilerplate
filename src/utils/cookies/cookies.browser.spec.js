@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import CookieManager from "utils/cookies";
+import CookieManager from "utils/cookies/manager";
 
 const cookieManager = new CookieManager();
 
