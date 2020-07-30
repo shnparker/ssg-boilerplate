@@ -1,5 +1,7 @@
 import React from "react";
 import PageLayout from "components/layout/PageLayout";
+import CompanyLogo from "components/svg/CompanyLogo";
+
 export default function Home() {
   return (
     <PageLayout
@@ -111,92 +113,322 @@ export default function Home() {
         </div>
         <div className="relative px-4 sm:px-6 lg:px-8">
           <div className="text-lg max-w-prose mx-auto mb-6">
+            <CompanyLogo />
             <p className="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">
               Introducing
             </p>
             <h1 className="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-              JavaScript for Beginners
+              Marketing Boilerplate
             </h1>
             <p className="text-xl text-gray-500 leading-8">
-              Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem.
-              At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at
-              vitae feugiat egestas ac. Diam nulla orci at in viverra
-              scelerisque eget. Eleifend egestas fringilla sapien.
+              This project is meant to provide developers with a plug-and-play
+              experience for rapidly developing marketing websites for clients.
+              It includes general website features such as cookies & consent,
+              the latest testing tools and a great CSS library to build your own
+              components with. If you need a more complete solution including
+              multi-tenancy, i18n, and CMS integration, please check out{" "}
+              <a
+                href="https://github.com/UnlyEd/next-right-now"
+                className="text-indigo-500 underline"
+              >
+                Next Right Now
+              </a>
+              , which has heavily inspired this boilerplate.
+            </p>
+            <p className="text-xl text-gray-500 leading-8 mt-4">
+              If you would like a boilerplate for a full page SSR webapp
+              instead, please look at my{" "}
+              <a
+                href="https://github.com/shnparker/webapp-boilerplate"
+                className="text-indigo-500 underline"
+              >
+                WebApp Boilerplate
+              </a>{" "}
+              instead.
             </p>
           </div>
           <div className="prose prose-lg text-gray-500 mx-auto">
+            <h2>Built with:</h2>
+            <ul>
+              <li>
+                <a
+                  href="https://reactjs.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  React
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://nextjs.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Next.js
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://react-svgr.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  SVGR
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://tailwindcss.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  TailwindCSS
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://tailwindui.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  TailwindUI
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://fontawesome.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  FontAwesome Icons
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://jestjs.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Jest
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.cypress.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Cypress
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://sentry.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sentry
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://amplitude.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Amplitude
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://eslint.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ESLint
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://eslint.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Prettier
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://vercel.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Vercel Deployment
+                </a>
+              </li>
+            </ul>
+            <h2>Getting started</h2>
+            <p>To get a local copy up and running follow these simple steps.</p>
+            <h3>Prerequisites</h3>
             <p>
-              Faucibus commodo massa rhoncus, volutpat.{" "}
-              <strong>Dignissim</strong> sed <strong>eget risus enim</strong>.
-              Mattis mauris semper sed amet vitae sed turpis id. Id dolor
-              praesent donec est. Odio penatibus risus viverra tellus varius sit
-              neque erat velit. Faucibus commodo massa rhoncus, volutpat.
-              Dignissim sed eget risus enim.{" "}
-              <a href="#">Mattis mauris semper</a> sed amet vitae sed turpis id.
+              This is an example of how to list things you need to use the
+              software and how to install them.
             </p>
             <ul>
-              <li>Quis elit egestas venenatis mattis dignissim.</li>
-              <li>
-                Cras cras lobortis vitae vivamus ultricies facilisis tempus.
-              </li>
-              <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
+              <li>Node</li>
+              <li>Yarn</li>
             </ul>
+            <h3>Installation</h3>
+            <ol>
+              <li>
+                <p>Clone the boilerplate</p>
+                <code>
+                  git clone https://github.com/shnparker/website-boilerplate.git
+                </code>
+              </li>
+              <li>
+                <p>Install dependancies</p>
+                <code>yarn install</code>
+              </li>
+            </ol>
+            <h2>Usage</h2>
             <p>
-              Quis semper vulputate aliquam venenatis egestas sagittis quisque
-              orci. Donec commodo sit viverra aliquam porttitor ultrices gravida
-              eu. Tincidunt leo, elementum mattis elementum ut nisl, justo,
-              amet, mattis. Nunc purus, diam commodo tincidunt turpis. Amet,
-              duis sed elit interdum dignissim.
+              The boilerplate is set up to work seamlessly so that you can just
+              start adding components. The only requirement is to plug in the
+              following customizations:
             </p>
-            <h2>From beginner to expert in 30 days</h2>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/shnparker/website-boilerplate/blob/master/docs/fonts.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Fonts
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/shnparker/website-boilerplate/blob/master/docs/alias.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Alias paths
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/shnparker/website-boilerplate/blob/master/docs/env.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Environment variables
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/shnparker/website-boilerplate/blob/master/docs/default.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Default head
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/shnparker/website-boilerplate/blob/master/docs/svg.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  SVG generation
+                </a>
+              </li>
+            </ul>
+            <p>When everything is set, run the app.</p>
+            <code>yarn dev</code>
+            <h2>Deployment</h2>
             <p>
-              Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam
-              consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod
-              vitae interdum mauris enim, consequat vulputate nibh. Maecenas
-              pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim
-              cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis
-              ipsum eu a sed convallis diam.
+              Zero-configuration deployment when deploying Next.js projects to
+              Vercel. See{" "}
+              <a
+                href="https://vercel.com/guides/deploying-nextjs-with-vercel"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Deploying Next.js with Vercel
+              </a>
             </p>
-            <blockquote>
-              <p>
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
-              </p>
-            </blockquote>
+            <h2>Roadmap</h2>
             <p>
-              Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
-              enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
-              praesent donec est. Odio penatibus risus viverra tellus varius sit
-              neque erat velit.
+              See the{" "}
+              <a
+                href="https://github.com/shnparker/website-boilerplate/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                open issues
+              </a>{" "}
+              for a list of proposed features (and known issues).
             </p>
-            <figure>
-              <img
-                className="w-full rounded-lg"
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3"
-                alt=""
-                width="1310"
-                height="873"
-              />
-              <figcaption>
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-              </figcaption>
-            </figure>
-            <h3>Everything you need to get up and running</h3>
+            <h2>Contributing</h2>
             <p>
-              Purus morbi dignissim senectus mattis <a href="#">adipiscing</a>.
-              Amet, massa quam varius orci dapibus volutpat cras. In amet eu
-              ridiculus leo sodales cursus tristique. Tincidunt sed tempus ut
-              viverra ridiculus non molestie. Gravida quis fringilla amet eget
-              dui tempor dignissim. Facilisis auctor venenatis varius nunc,
-              congue erat ac. Cras fermentum convallis quam.
+              Contributions are what make the open source community such an
+              amazing place to be learn, inspire, and create. Any contributions
+              you make are <strong>greatly appreciated</strong>.
+            </p>
+            <ol>
+              <li>Fork the Project</li>
+              <li>
+                <p>Create your Feature Branch</p>
+                <code>git checkout -b feature/AmazingFeature</code>
+              </li>
+              <li>
+                <p>Commit your changes</p>
+                <code>git commit -m &apos;Add some AmazingFeature&apos;</code>
+              </li>
+              <li>
+                <p>Push to the Branch </p>
+                <code>git push origin feature/AmazingFeature</code>
+              </li>
+              <li>Open a Pull Request</li>
+            </ol>
+            <h2>License</h2>
+            <p>
+              Distributed under the MIT License. See `LICENSE` for more
+              information.
+            </p>
+            <h2>Contact</h2>
+            <p>
+              Shane Parker -{" "}
+              <a
+                href="https://twitter.com/shnparker"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @shnparker
+              </a>{" "}
+              - <a href="mailto:">shane@sitestack.co.za</a>
             </p>
             <p>
-              Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
-              enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
-              praesent donec est. Odio penatibus risus viverra tellus varius sit
-              neque erat velit.
+              Project link:{" "}
+              <a href="https://github.com/shnparker/website-boilerplate">
+                https://github.com/shnparker/website-boilerplate
+              </a>
             </p>
+            <h2>Acknowledgements</h2>
+            <ul>
+              <li>
+                <a href="https://github.com/UnlyEd/next-right-now">
+                  Next Right Now
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/othneildrew/Best-README-Template">
+                  Best-README-template
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
