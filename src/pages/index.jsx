@@ -1,6 +1,6 @@
 import React from "react";
 import PageLayout from "components/layout/PageLayout";
-import CompanyLogo from "components/svg/CompanyLogo";
+import CompanyLogo from "components/svg";
 
 export default function Home() {
   return (

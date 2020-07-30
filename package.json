@@ -9,7 +9,7 @@
     "debug": "NODE_OPTIONS='--inspect' next dev",
     "build": "yarn test && next build",
     "start": "next start",
-    "svg": "npx @svgr/cli -d svg svg --ext jsx",
+    "svg": "npx @svgr/cli -d src/components/svg svg --ext jsx --template svg/template.js",
     "analyse": "ANALYZE_BUNDLE=true yarn start",
     "e2e": "cypress run --config-file cypress/config.json",
     "e2e:open": "cypress open --config-file cypress/config.json",
