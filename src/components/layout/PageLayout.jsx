@@ -47,15 +47,13 @@ function PageLayout(props) {
 
       <Nav />
 
-      <div>
-        {error ? (
-          <ErrorPage statusCode={500} isReadyToRender={true} err={error}>
-            <ErrorLayout error={error} />
-          </ErrorPage>
-        ) : (
-          <main>{children}</main>
-        )}
-      </div>
+      {error ? (
+        <ErrorPage statusCode={500} isReadyToRender={true} err={error}>
+          <ErrorLayout error={error} />
+        </ErrorPage>
+      ) : (
+        <main>{children}</main>
+      )}
 
       <Footer />
     </Amplitude>

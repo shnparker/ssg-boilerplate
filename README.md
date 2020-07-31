@@ -1,7 +1,8 @@
 <!-- PROJECT LOGO -->
+<img src="./svg/company-logo.svg" alt="Company logo" />
 <br />
 <p align="center">
-  <h3 align="center">Next.js Boilerplate</h3>
+  <h3 align="center">Website Boilerplate</h3>
 
   <p align="center">
     An opinionated boilerplate project that allows rapid development of a SSG/SSR hybrid app meant for marketing web pages.
@@ -33,15 +34,18 @@
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
-<!-- ABOUT THE PROJECT
+<!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+<!-- Product screenshot -->
+<!-- [![Product Name Screen Shot][product-screenshot]](http://placecorgi.com/500) -->
 
-<!-- Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email` -->
+This project is meant to provide developers with a plug-and-play experience for rapidly developing marketing websites for clients. It includes general website features such as cookies & consent, the latest testing tools and a great CSS library to build your own components with.
+
+If you need a more complete solution including multi-tenancy, i18n, and CMS integration, please check out [Next Right Now](https://github.com/UnlyEd/next-right-now), which has heavily inspired this boilerplate.
+
+If you would like a boilerplate for a full page SSR webapp instead, please look at my [WebApp Boilerplate](https://github.com/shnparker/webapp-boilerplate)
 
 ### Built With
 
@@ -56,6 +60,7 @@
 - [Sentry](https://sentry.io)
 - [Amplitude](https://amplitude.com/)
 - [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 - [Vercel Deployment](https://vercel.com)
 
 <!-- GETTING STARTED -->
@@ -79,7 +84,7 @@ This is an example of how to list things you need to use the software and how to
 git clone https://github.com/shnparker/nextjs-boilerplate.git
 ```
 
-2. Install node modules
+2. Install dependancies
 
 ```sh
 yarn install
@@ -92,11 +97,11 @@ yarn install
 The boilerplate is set up to work seamlessly so that you can just start adding components.
 The only requirement is to plug in the following customizations:
 
-- [Fonts](docs-fonts)
-- [Alias paths](docs-alias)
-- [Environment variables](docs-env)
-- [Default head](docs-defaults)
-- [SVG Generation](docs-svg)
+- [Fonts][docs-fonts]
+- [Alias paths][docs-alias]
+- [Environment variables][docs-env]
+- [Default head][docs-defaults]
+- [SVG Generation][docs-svg]
 
 When everything is set, run the app.
 
@@ -113,7 +118,7 @@ See [Deploying Next.js with Vercel(https://vercel.com/guides/deploying-nextjs-wi
 
 ## Roadmap
 
-See the [open issues](issues-url) for a list of proposed features (and known issues).
+See the [open issues][issues-url] for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -137,9 +142,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Shane Parker - [@shnparker](twitter-url) - [shane@sitestack.co.za](email-url)
+Shane Parker - [@shnparker][twitter-url] - [shane@sitestack.co.za][email-url]
 
-Project Link: [https://github.com/shnparker/nextjs-boilerplate](repo-url)
+Project Link: [https://github.com/shnparker/nextjs-boilerplate][repo-url]
 
 <!-- ACKNOWLEDGEMENTS -->
 
