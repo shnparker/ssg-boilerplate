@@ -45,7 +45,7 @@ This project is meant to provide developers with a plug-and-play experience for 
 
 If you need a more complete solution including multi-tenancy, i18n, and CMS integration, please check out [Next Right Now](https://github.com/UnlyEd/next-right-now), which has heavily inspired this boilerplate.
 
-If you would like a boilerplate for a full page SSR webapp instead, please look at my [WebApp Boilerplate](https://github.com/shnparker/webapp-boilerplate)
+I also have an upcoming full-page webapp boilerplate, but it is private due to licensing with TailwindUI. I will think of ways to open source such a boilerplate without breaking licensing.
 
 ### Built With
 
@@ -53,7 +53,6 @@ If you would like a boilerplate for a full page SSR webapp instead, please look 
 - [Next.js](https://nextjs.org/)
 - [SVGR React Components](https://react-svgr.com/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [TailwindUI](https://tailwindui.com)
 - [FontAwesome Icons](https://fontawesome.com/)
 - [Jest](https://jestjs.io/)
 - [Cypress](https://www.cypress.io/)
@@ -103,6 +102,8 @@ The only requirement is to plug in the following customizations:
 - [Default head][docs-defaults]
 - [SVG Generation][docs-svg]
 
+I've removed [TailwindUI](https://tailwindui.com) from the project due to licensing, it will live in a private company fork instead. If you have purchased TailwindUI (which I highly recommend everyone does), you can vastly extend your capabilities and install it by follow the short [TailwindUI Installation][docs-tailwind] guide.
+
 When everything is set, run the app.
 
 ```sh
@@ -112,7 +113,7 @@ yarn dev
 ## Deployment
 
 Zero-configuration deployment when deploying Next.js projects to Vercel.
-See [Deploying Next.js with Vercel(https://vercel.com/guides/deploying-nextjs-with-vercel)
+See [Deploying Next.js with Vercel](https://vercel.com/guides/deploying-nextjs-with-vercel)
 
 <!-- ROADMAP -->
 
@@ -168,3 +169,4 @@ Project Link: [https://github.com/shnparker/nextjs-boilerplate][repo-url]
 [docs-svg]: docs/svg.md
 [docs-defaults]: docs/defaults.md
 [docs-env]: docs/env.md
+[docs-tailwind]: docs/tailwind.md
