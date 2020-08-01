@@ -2,18 +2,18 @@
 <img src="./svg/company-logo.svg" alt="Company logo" />
 <br />
 <p align="center">
-  <h3 align="center">Website Boilerplate</h3>
+  <h3 align="center">Next.js Website Boilerplate</h3>
 
   <p align="center">
     An opinionated boilerplate project that allows rapid development of a SSG/SSR hybrid app meant for marketing web pages.
 <br />
 <br />
-<a href="https://github.com/shnparker/nextjs-boilerplate"><strong>Explore the docs »</strong></a>
+<a href="https://github.com/sitestack/nextjs-website-boilerplate"><strong>Explore the docs »</strong></a>
 <br />
 <br />
-<a href="https://github.com/shnparker/nextjs-boilerplate/issues">Report Bug</a>
+<a href="https://github.com/sitestack/nextjs-website-boilerplate/issues">Report Bug</a>
 ·
-<a href="https://github.com/shnparker/nextjs-boilerplate/issues">Request Feature</a>
+<a href="https://github.com/sitestack/nextjs-website-boilerplate/issues">Request Feature</a>
 
   </p>
 </p>
@@ -44,8 +44,6 @@
 This project is meant to provide developers with a plug-and-play experience for rapidly developing marketing websites for clients. It includes general website features such as cookies & consent, the latest testing tools and a great CSS library to build your own components with.
 
 If you need a more complete solution including multi-tenancy, i18n, and CMS integration, please check out [Next Right Now](https://github.com/UnlyEd/next-right-now), which has heavily inspired this boilerplate.
-
-I also have an upcoming full-page webapp boilerplate, but it is private due to licensing with TailwindUI. I will think of ways to open source such a boilerplate without breaking licensing.
 
 ### Built With
 
@@ -80,7 +78,7 @@ This is an example of how to list things you need to use the software and how to
 1. Clone the repo
 
 ```sh
-git clone https://github.com/shnparker/nextjs-boilerplate.git
+git clone https://github.com/sitestack/nextjs-website-boilerplate.git
 ```
 
 2. Install dependancies
@@ -145,7 +143,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Shane Parker - [@shnparker][twitter-url] - [shane@sitestack.co.za][email-url]
 
-Project Link: [https://github.com/shnparker/nextjs-boilerplate][repo-url]
+Project Link: [https://github.com/sitestack/nextjs-website-boilerplate][repo-url]
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -159,8 +157,8 @@ Project Link: [https://github.com/shnparker/nextjs-boilerplate][repo-url]
 
 [twitter-url]: https://twitter.com/shnparker
 [email-url]: mailto:shane@sitestack.co.za
-[repo-url]: https://github.com/shnparker/nextjs-boilerplate
-[issues-url]: https://github.com/shnparker/nextjs-boilerplate/issues
+[repo-url]: https://github.com/sitestack/nextjs-website-boilerplate
+[issues-url]: https://github.com/sitestack/nextjs-website-boilerplate/issues
 
 <!-- Docs -->
 
