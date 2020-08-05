@@ -159,7 +159,7 @@ Project Link: [https://github.com/shnparker/nextjs-website-boilerplate][repo-url
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [twitter-url]: https://twitter.com/shnparker
-[email-url]: mailto:shane@shnparker.co.za
+[email-url]: mailto:shane@sitestack.co.za
 [repo-url]: https://github.com/shnparker/nextjs-website-boilerplate
 [issues-url]: https://github.com/shnparker/nextjs-website-boilerplate/issues
 
