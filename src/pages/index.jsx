@@ -12,7 +12,7 @@ export default function Home() {
     >
       <div className="relative py-16 bg-white overflow-hidden">
         <div className="relative px-4 sm:px-6 lg:px-8">
-          <div className="text-lg max-w-3xl mx-auto mb-6">
+          <div className="text-lg max-w-prose mx-auto mb-6">
             <CompanyLogo />
             <p className="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">
               Introducing

@@ -1,27 +1,27 @@
 # Tailwind UI
 
-To add TailwindUI to this project, follow these instructions:
+To remove TailwindUI from this project, follow these instructions:
 
 ### Swap out packages
 
-Tailwind UI already includes the plugins we add to the config, so we'll remove them:
+Tailwind has additional packages that can extend your capabilities without UI, lets add them:
 
 ```sh
-yarn remove @tailwindcss/custom-forms @tailwindcss/typography
+yarn add @tailwindcss/custom-forms @tailwindcss/typography
 ```
 
-Add the UI package
+Remove the UI package
 
 ```sh
-yarn add @tailwindcss/ui
+yarn remove @tailwindcss/ui
 ```
 
 ### Update tailwind.config.js
 
 ```diff
 plugins: [
--  require("@tailwindcss/typography"),
--  require("@tailwindcss/custom-forms"),
-+  require("@tailwindcss/ui")
++  require("@tailwindcss/typography"),
++  require("@tailwindcss/custom-forms"),
+-  require("@tailwindcss/ui")
 ],
 ```

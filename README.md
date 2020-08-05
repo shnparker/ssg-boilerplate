@@ -8,12 +8,12 @@
     An opinionated boilerplate project that allows rapid development of a SSG/SSR hybrid app meant for marketing web pages.
 <br />
 <br />
-<a href="https://github.com/sitestack/nextjs-website-boilerplate"><strong>Explore the docs »</strong></a>
+<a href="https://github.com/shnparker/nextjs-website-boilerplate"><strong>Explore the docs »</strong></a>
 <br />
 <br />
-<a href="https://github.com/sitestack/nextjs-website-boilerplate/issues">Report Bug</a>
+<a href="https://github.com/shnparker/nextjs-website-boilerplate/issues">Report Bug</a>
 ·
-<a href="https://github.com/sitestack/nextjs-website-boilerplate/issues">Request Feature</a>
+<a href="https://github.com/shnparker/nextjs-website-boilerplate/issues">Request Feature</a>
 
   </p>
 </p>
@@ -51,6 +51,7 @@ If you need a more complete solution including multi-tenancy, i18n, and CMS inte
 - [Next.js](https://nextjs.org/)
 - [SVGR React Components](https://react-svgr.com/)
 - [TailwindCSS](https://tailwindcss.com/)
+- [TailwindUI](https://tailwindui.com/)
 - [FontAwesome Icons](https://fontawesome.com/)
 - [Jest](https://jestjs.io/)
 - [Cypress](https://www.cypress.io/)
@@ -78,7 +79,7 @@ This is an example of how to list things you need to use the software and how to
 1. Clone the repo
 
 ```sh
-git clone https://github.com/sitestack/nextjs-website-boilerplate.git
+git clone https://github.com/shnparker/nextjs-website-boilerplate.git
 ```
 
 2. Install dependancies
@@ -99,8 +100,10 @@ The only requirement is to plug in the following customizations:
 - [Environment variables][docs-env]
 - [Default head][docs-defaults]
 - [SVG Generation][docs-svg]
+- [TailwindUI][docs-tailwind]
 
-I've removed [TailwindUI](https://tailwindui.com) from the project due to licensing, it will live in a private company fork instead. If you have purchased TailwindUI (which I highly recommend everyone does), you can vastly extend your capabilities and install it by follow the short [TailwindUI Installation][docs-tailwind] guide.
+I've readded [TailwindUI](https://tailwindui.com) after clearing licensing queries with the creators. The Tailwind UI npm package is public and free, but the premade components are licensed, therefore this project will contain no premade components.
+If you have not purchased TailwindUI (which I highly recommend everyone does), you can remove it from your project by following the short [TailwindUI Replacement][docs-tailwind] guide.
 
 When everything is set, run the app.
 
@@ -143,7 +146,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Shane Parker - [@shnparker][twitter-url] - [shane@sitestack.co.za][email-url]
 
-Project Link: [https://github.com/sitestack/nextjs-website-boilerplate][repo-url]
+Project Link: [https://github.com/shnparker/nextjs-website-boilerplate][repo-url]
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -156,9 +159,9 @@ Project Link: [https://github.com/sitestack/nextjs-website-boilerplate][repo-url
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [twitter-url]: https://twitter.com/shnparker
-[email-url]: mailto:shane@sitestack.co.za
-[repo-url]: https://github.com/sitestack/nextjs-website-boilerplate
-[issues-url]: https://github.com/sitestack/nextjs-website-boilerplate/issues
+[email-url]: mailto:shane@shnparker.co.za
+[repo-url]: https://github.com/shnparker/nextjs-website-boilerplate
+[issues-url]: https://github.com/shnparker/nextjs-website-boilerplate/issues
 
 <!-- Docs -->
 
