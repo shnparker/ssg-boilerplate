@@ -1,6 +1,6 @@
 # Tailwind UI
 
-To remove TailwindUI from this project, follow these instructions:
+To remove Tailwind UI from this project, follow these instructions:
 
 ### Swap out packages
 

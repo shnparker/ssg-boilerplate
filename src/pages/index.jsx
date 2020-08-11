@@ -18,7 +18,7 @@ export default function Home() {
               Introducing
             </p>
             <h1 className="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-              Marketing Boilerplate
+              Next.js Website Boilerplate
             </h1>
             <p className="text-xl text-gray-500 leading-8">
               This project is meant to provide developers with a plug-and-play
@@ -34,17 +34,6 @@ export default function Home() {
                 Next Right Now
               </a>
               , which has heavily inspired this boilerplate.
-            </p>
-            <p className="text-xl text-gray-500 leading-8 mt-4">
-              If you would like a boilerplate for a full page SSR webapp
-              instead, please look at my{" "}
-              <a
-                href="https://github.com/shnparker/webapp-boilerplate"
-                className="text-indigo-500 underline"
-              >
-                WebApp Boilerplate
-              </a>{" "}
-              instead.
             </p>
           </div>
           <div className="prose prose-lg text-gray-500 mx-auto">
@@ -92,7 +81,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  TailwindUI
+                  Tailwind UI
                 </a>
               </li>
               <li>
@@ -184,7 +173,8 @@ export default function Home() {
               <li>
                 <p>Clone the boilerplate</p>
                 <code>
-                  git clone https://github.com/shnparker/website-boilerplate.git
+                  git clone
+                  https://github.com/shnparker/nextjs-website-boilerplate.git
                 </code>
               </li>
               <li>
@@ -201,7 +191,7 @@ export default function Home() {
             <ul>
               <li>
                 <a
-                  href="https://github.com/shnparker/website-boilerplate/blob/master/docs/fonts.md"
+                  href="https://github.com/shnparker/nextjs-website-boilerplate/blob/master/docs/fonts.md"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -210,7 +200,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="https://github.com/shnparker/website-boilerplate/blob/master/docs/alias.md"
+                  href="https://github.com/shnparker/nextjs-website-boilerplate/blob/master/docs/alias.md"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -219,7 +209,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="https://github.com/shnparker/website-boilerplate/blob/master/docs/env.md"
+                  href="https://github.com/shnparker/nextjs-website-boilerplate/blob/master/docs/env.md"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -228,7 +218,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="https://github.com/shnparker/website-boilerplate/blob/master/docs/default.md"
+                  href="https://github.com/shnparker/nextjs-website-boilerplate/blob/master/docs/default.md"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -237,14 +227,39 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="https://github.com/shnparker/website-boilerplate/blob/master/docs/svg.md"
+                  href="https://github.com/shnparker/nextjs-website-boilerplate/blob/master/docs/svg.md"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   SVG generation
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://github.com/shnparker/nextjs-website-boilerplate/blob/master/docs/tailwind.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tailwind UI
+                </a>
+              </li>
             </ul>
+            <p>
+              I&apos;ve readded Tailwind UI after clearing licensing queries
+              with the creators. The Tailwind UI npm package is public and free,
+              but the premade components are licensed, therefore this project
+              will contain no premade components. If you have not purchased
+              Tailwind UI (which I highly recommend everyone does), you can
+              remove it from your project by following the short{" "}
+              <a
+                href="https://github.com/shnparker/nextjs-website-boilerplate/blob/master/docs/tailwind.md"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tailwind UI
+              </a>{" "}
+              guide.
+            </p>
             <p>When everything is set, run the app.</p>
             <code>yarn dev</code>
             <h2>Deployment</h2>
@@ -263,7 +278,7 @@ export default function Home() {
             <p>
               See the{" "}
               <a
-                href="https://github.com/shnparker/website-boilerplate/issues"
+                href="https://github.com/shnparker/nextjs-website-boilerplate/issues"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -312,8 +327,8 @@ export default function Home() {
             </p>
             <p>
               Project link:{" "}
-              <a href="https://github.com/shnparker/website-boilerplate">
-                https://github.com/shnparker/website-boilerplate
+              <a href="https://github.com/shnparker/nextjs-website-boilerplate">
+                https://github.com/shnparker/nextjs-website-boilerplate
               </a>
             </p>
             <h2>Acknowledgements</h2>
