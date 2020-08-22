@@ -16,7 +16,6 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { faHome, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { isBrowser } from "utils/platform";
 import { v1 as uuidv1 } from "uuid";
 import "styles/index.css";
@@ -35,22 +34,7 @@ import CookieManager from "utils/cookies/manager";
  * @see https://github.com/FortAwesome/react-fontawesome#integrating-with-other-tools-and-frameworks
  */
 config.autoAddCss = false;
-library.add(faFacebook, faTwitter, faInstagram, faLinkedin, faHome, faSpinner);
-
-/**
- * Why Did You Render
- * @see https://github.com/welldone-software/why-did-you-render
- */
-if (isBrowser() && process.env.NODE_ENV === "development") {
-  const whyDidYouRender = require("@welldone-software/why-did-you-render");
-
-  whyDidYouRender(React, {
-    trackAllPureComponents: true,
-    trackHooks: true,
-    logOwnerReasons: true,
-    collapseGroups: true,
-  });
-}
+library.add(faFacebook, faTwitter, faInstagram, faLinkedin);
 
 /**
  * Global variable meant to keep all metrics together, until there are enough to send them in batch as a single report
@@ -130,8 +114,8 @@ function App({ Component, pageProps, err }) {
         apiKey={process.env.NEXT_PUBLIC_AMPLITUDE_KEY}
         userId={userId}
       >
-        <UserSessionContext.Provider value={{ ...userSession }}>
-          <UserConsentContext.Provider value={{ ...userConsent }}>
+        <UserSessionContext.Provider value={userSession}>
+          <UserConsentContext.Provider value={userConsent}>
             <Component {...injectedPageProps} error={err} />
           </UserConsentContext.Provider>
         </UserSessionContext.Provider>
@@ -140,7 +124,7 @@ function App({ Component, pageProps, err }) {
   }
 
   return (
-    <UserSessionContext.Provider value={{ ...userSession }}>
+    <UserSessionContext.Provider value={userSession}>
       <Component {...injectedPageProps} error={err} />
     </UserSessionContext.Provider>
   );

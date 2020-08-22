@@ -1,29 +1,18 @@
 /**
- * ISOMORPHIC COOKIE MANAGEMENT
+ * COOKIE MANAGEMENT
  *
- * Cookie utils that manages both browser/server environments
+ * Cookie utils that manages current browser cookies
  * Source of data for user session context store
  */
 
 import * as Sentry from "@sentry/node";
 import BrowserCookies from "js-cookie";
-import ServerCookies from "cookies";
 import { v1 as uuidv1 } from "uuid";
 import { isBrowser } from "utils/platform";
 
 const COOKIE_KEY = "user";
 
 class CookieManager {
-  //Useful if req/res aren't accessible (CSR, or SSR outside of _app), will allow to read cookie (but won't allow writes)
-  constructor(req, res, readonlyCookies) {
-    this.req = req || null;
-    this.res = res || null;
-    this.readonlyCookies = readonlyCookies || null;
-  }
-
-  // COOKIE CRUD
-  // ------------------------------
-
   /**
    * Creates an initial default cookie
    */
@@ -53,29 +42,17 @@ class CookieManager {
   /**
    * Replaces the existing cookie entirely with provided data
    * @param {*} newData
-   * @param {*} serverOptions
    * @param {*} browserOptions
    */
-  updateCookie(
-    newData,
-    serverOptions = this.getDefaultServerOptions(),
-    browserOptions = this.getDefaultBrowserOptions()
-  ) {
+  updateCookie(newData, browserOptions = this.getDefaultBrowserOptions()) {
     try {
       if (isBrowser()) {
-        //  "js-cookies" apply a "percent encoding" when writing data, which isn't compatible with the "cookies" lib
-        //  We therefore override this behaviour because we need to write proper JSON
-        //  @see https://github.com/js-cookie/js-cookie#encoding
         const browserCookies = BrowserCookies.withConverter({
           write: function (value) {
             return value;
           },
         });
         browserCookies.set(COOKIE_KEY, JSON.stringify(newData), browserOptions);
-      } else if (this.req && this.res) {
-        // If running on the server side but req or res aren't set, then we don't do anything
-        const serverCookies = new ServerCookies(this.req, this.res);
-        serverCookies.set(COOKIE_KEY, JSON.stringify(newData), serverOptions);
       }
     } catch (e) {
       console.error(e);
@@ -97,30 +74,11 @@ class CookieManager {
     }
   }
 
-  /**
-   * Get the current cookie object
-   * @param {*} serverOptions
-   */
-  getCookie(serverOptions) {
+  getCookie() {
     let cookieData;
 
     if (isBrowser()) {
       cookieData = BrowserCookies.get(COOKIE_KEY);
-    } else {
-      const serverCookies = new ServerCookies(this.req, this.res);
-
-      // If running on the server side but req or res aren't set, then we should have access to readonlyCookies provided through the _app:getInitialProps
-      // Otherwise, it means that's we're trying to read our cookies through SSR but have no way of reading them, which will cause a odd behaviour
-      // XXX To avoid this issue, the easiest way is to provide readonlyCookies through the constructor, so that we can read cookies from server side
-      if (this.req && this.res) {
-        cookieData = serverCookies.get(COOKIE_KEY, serverOptions);
-      } else if (this.readonlyCookies) {
-        cookieData = this.readonlyCookies?.[COOKIE_KEY];
-      } else {
-        console.warn(
-          "Attempted to fetch cookies on the server with no res/req, temporary user session created."
-        );
-      }
     }
 
     // Create default cookie for user on first visit.
@@ -152,17 +110,6 @@ class CookieManager {
 
   // COOKIE DEFAULTS
   // ------------------------------
-
-  /**
-   * Default server cookie config
-   */
-  getDefaultServerOptions() {
-    const today = new Date();
-    return {
-      httpOnly: false, // Force cookies to be sent to the browser
-      expires: new Date(today.setFullYear(today.getFullYear() + 10)), // 10 years
-    };
-  }
 
   /**
    * Default browser cookie config

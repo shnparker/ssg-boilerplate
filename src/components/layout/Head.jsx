@@ -20,7 +20,7 @@ Head.propTypes = {
 };
 
 function Head(props) {
-  const defaultTitle = "";
+  const defaultTitle = "Next.js Website Boilerplate";
   const defaultDescription = "";
   const defaultOGURL = "";
   const defaultOGImage = "";

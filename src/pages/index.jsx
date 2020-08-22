@@ -1,6 +1,6 @@
 import React from "react";
 import PageLayout from "components/layout/PageLayout";
-import CompanyLogo from "components/svg/CompanyLogo";
+import Logo from "components/svg/Logo";
 
 export default function Home() {
   return (
@@ -13,12 +13,14 @@ export default function Home() {
       <div className="relative py-16 bg-white overflow-hidden">
         <div className="relative px-4 sm:px-6 lg:px-8">
           <div className="text-lg max-w-prose mx-auto mb-6">
-            <CompanyLogo />
-            <p className="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">
+            <Logo />
+            <p className="text-base text-center leading-6 font-semibold tracking-wide uppercase">
               Introducing
             </p>
             <h1 className="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-              Next.js Website Boilerplate
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-brand-blue">
+                Next.js Website Boilerplate
+              </span>
             </h1>
             <p className="text-xl text-gray-500 leading-8">
               This project is meant to provide developers with a plug-and-play
@@ -29,7 +31,7 @@ export default function Home() {
               multi-tenancy, i18n, and CMS integration, please check out{" "}
               <a
                 href="https://github.com/UnlyEd/next-right-now"
-                className="text-indigo-500 underline"
+                className="underline"
               >
                 Next Right Now
               </a>

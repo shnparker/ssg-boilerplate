@@ -1,5 +1,5 @@
 <!-- PROJECT LOGO -->
-<img src="./svg/company-logo.svg" alt="Company logo" />
+<img src="./svg/logo.svg" alt="Logo" />
 <br />
 <p align="center">
   <h3 align="center">Next.js Website Boilerplate</h3>
