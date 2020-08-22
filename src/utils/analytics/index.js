@@ -71,7 +71,7 @@ export const sendWebVitals = (report) => {
     const amplitude = require("amplitude-js");
     const amplitudeInstance = amplitude.getInstance();
     const cookieManager = new CookieManager();
-    const userData = cookieManager.getUserData();
+    const userData = cookieManager.getCookie();
 
     amplitudeInstance.init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY, null, {
       userId: userData.id,

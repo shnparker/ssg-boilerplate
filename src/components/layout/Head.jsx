@@ -21,10 +21,11 @@ Head.propTypes = {
 
 function Head(props) {
   const defaultTitle = "";
-  const defaultDescription = "";
+  const defaultDescription =
+    "An opinionated boilerplate project that allows rapid development of a SSG/SSR hybrid app meant for marketing web pages.";
   const defaultOGURL = "";
   const defaultOGImage = "";
-  const defaultFavicon = "";
+  const defaultFavicon = "/favicon.ico";
 
   const {
     title = defaultTitle,
