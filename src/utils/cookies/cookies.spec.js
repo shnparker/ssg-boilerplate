@@ -12,15 +12,6 @@ describe(`Cookie Manager`, () => {
       cookieManager.deleteCookies();
     });
 
-    describe(`constructor`, () => {
-      test(`should init correctly (no arg)`, async () => {
-        const cookieManager = new CookieManager();
-
-        expect(cookieManager.req).toEqual(null);
-        expect(cookieManager.res).toEqual(null);
-      });
-    });
-
     describe(`createCookie`, () => {
       test(`should init the user and return it`, async () => {
         const cookieManager = new CookieManager();
