@@ -10,12 +10,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import {
-  faFacebook,
-  faTwitter,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { isBrowser } from "utils/platform";
 import { v1 as uuidv1 } from "uuid";
 import "styles/index.css";

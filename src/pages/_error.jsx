@@ -35,11 +35,7 @@ function AppError({ statusCode, hasGetInitialPropsRun, err, children = null }) {
   ) : (
     <NextErrorComponent
       statusCode={statusCode}
-      title={
-        process.env.NEXT_PUBLIC_APP_STAGE !== "production"
-          ? err?.message ?? null
-          : null
-      }
+      title={process.env.NEXT_PUBLIC_APP_STAGE !== "production" ? err?.message ?? null : null}
     />
   );
 }

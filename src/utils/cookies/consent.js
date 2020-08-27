@@ -12,8 +12,7 @@ export const getUserConsent = () => {
   const userConsentChoice = BrowserCookies.get(CONSENT_COOKIE_NAME);
   const isUserOptOut = userConsentChoice === "deny";
   const isUserOptIn =
-    userConsentChoice === "allow" ||
-    (userConsentChoice === "dismiss" && USER_OPT_IN_BY_DEFAULT);
+    userConsentChoice === "allow" || (userConsentChoice === "dismiss" && USER_OPT_IN_BY_DEFAULT);
 
   let hasConsentedAnalytics;
 
@@ -28,8 +27,7 @@ export const getUserConsent = () => {
 
   return {
     hasConsentedAnalytics,
-    hasConsentedCookies:
-      userConsentChoice === "allow" || userConsentChoice === "deny",
+    hasConsentedCookies: userConsentChoice === "allow" || userConsentChoice === "deny",
   };
 };
 
@@ -144,11 +142,7 @@ const init = (options) => {
     },
 
     onInitialise: function (status) {
-      console.info(
-        "onInitialise",
-        `User consent from "${CONSENT_COOKIE_NAME}" cookie:`,
-        status
-      );
+      console.info("onInitialise", `User consent from "${CONSENT_COOKIE_NAME}" cookie:`, status);
     },
 
     onStatusChange: function (status) {

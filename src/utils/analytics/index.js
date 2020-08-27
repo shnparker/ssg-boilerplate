@@ -28,8 +28,7 @@ export const getAmplitudeInstance = (props) => {
 
     amplitudeInstance.init(process.env.NEXT_PUBLIC_AMPLITUDE_KEY, null, {
       userId,
-      logLevel:
-        process.env.NEXT_PUBLIC_APP_STAGE === "production" ? "DISABLE" : "WARN",
+      logLevel: process.env.NEXT_PUBLIC_APP_STAGE === "production" ? "DISABLE" : "WARN",
       includeGclid: true,
       includeReferrer: true,
       includeUtm: true,
@@ -75,8 +74,7 @@ export const sendWebVitals = (report) => {
 
     amplitudeInstance.init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY, null, {
       userId: userData.id,
-      logLevel:
-        process.env.NEXT_PUBLIC_APP_STAGE === "production" ? "DISABLE" : "WARN",
+      logLevel: process.env.NEXT_PUBLIC_APP_STAGE === "production" ? "DISABLE" : "WARN",
       includeGclid: false,
       includeReferrer: true,
       includeUtm: true,
