@@ -5,11 +5,6 @@ cypress/
 coverage/
 .editorconfig
 .env.local.example
-buildspec.yml
 README.md
 yarn.lock
 yarn-error.log
-
-# Avoid tests being deployed as Vercel Serverless Functions (increases bundle size, and count towards limits)
-src/pages/api/*.test.ts
-src/pages/api/**/*.test.ts
