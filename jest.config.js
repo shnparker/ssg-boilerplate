@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
   modulePathIgnorePatterns: [".next/", "cypress"],
   moduleNameMapper: {
     "^pages(.*)$": "<rootDir>/src/pages$1",

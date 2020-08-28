@@ -1,3 +1,7 @@
+/**
+ * @jest-environment node
+ */
+
 import { isBrowser } from "utils/platform";
 
 describe("isBrowser", () => {
@@ -5,7 +9,7 @@ describe("isBrowser", () => {
     const isBrowserMock = jest.fn(isBrowser);
     const result = isBrowserMock();
 
-    expect(isBrowserMock, "isBrowser was not called.").toHaveBeenCalled();
+    expect(isBrowserMock).toHaveBeenCalled();
     expect(result).toBe(false);
   });
 });
