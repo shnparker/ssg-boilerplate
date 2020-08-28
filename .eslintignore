@@ -1,5 +1,7 @@
 node_modules
 .next
+.vercel
+coverage
 src/svg/**
 src/components/svg/**
 yarn.lock 

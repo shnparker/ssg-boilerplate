@@ -20,10 +20,10 @@ Head.propTypes = {
 };
 
 function Head(props) {
-  const defaultTitle = "";
+  const defaultTitle = "Shane Parker";
   const defaultDescription =
     "An opinionated boilerplate project that allows rapid development of a SSG/SSR hybrid app meant for marketing web pages.";
-  const defaultOGURL = "";
+  const defaultOGURL = "https://boilerplate.shaneparker.co.za";
   const defaultOGImage = "";
   const defaultFavicon = "/favicon.ico";
 

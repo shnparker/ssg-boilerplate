@@ -8,9 +8,6 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { config, library } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { isBrowser } from "utils/platform";
 import { v1 as uuidv1 } from "uuid";
 import "styles/index.css";
@@ -23,13 +20,6 @@ import UserSessionContext from "stores/userSessionContext";
 import initCookieConsent, { getUserConsent } from "utils/cookies/consent";
 import "cookieconsent/build/cookieconsent.min.css";
 import CookieManager from "utils/cookies/manager";
-
-/**
- * Font Awesome Icons
- * @see https://github.com/FortAwesome/react-fontawesome#integrating-with-other-tools-and-frameworks
- */
-config.autoAddCss = false;
-library.add(faFacebook, faTwitter, faInstagram, faLinkedin);
 
 /**
  * Global variable meant to keep all metrics together, until there are enough to send them in batch as a single report
