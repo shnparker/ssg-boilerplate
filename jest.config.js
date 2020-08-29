@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
   modulePathIgnorePatterns: [".next/", "cypress"],
   moduleNameMapper: {
     "^pages(.*)$": "<rootDir>/src/pages$1",
@@ -18,7 +18,6 @@ module.exports = {
   },
   setupFilesAfterEnv: [
     "jest-extended", // @see https://github.com/jest-community/jest-extended
-    "jest-expect-message", // @see https://github.com/mattphillips/jest-expect-message
     "./jest.setup.js",
   ],
 };

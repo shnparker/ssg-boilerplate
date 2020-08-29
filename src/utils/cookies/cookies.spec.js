@@ -45,9 +45,7 @@ describe(`Cookie Manager`, () => {
 
         expect(userSession.id).toBeDefined();
         expect(userSession.deviceId).toBeDefined();
-        expect(document.cookie).toEqual(
-          `user={"id":"user-2","deviceId":"device-2"}`
-        );
+        expect(document.cookie).toEqual(`user={"id":"user-2","deviceId":"device-2"}`);
       });
     });
 
@@ -60,9 +58,7 @@ describe(`Cookie Manager`, () => {
           deviceId: "device-1",
         });
 
-        expect(document.cookie).toEqual(
-          'user={"id":"user-1","deviceId":"device-1"}'
-        );
+        expect(document.cookie).toEqual('user={"id":"user-1","deviceId":"device-1"}');
       });
     });
 

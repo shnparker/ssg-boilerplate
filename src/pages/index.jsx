@@ -23,16 +23,12 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl text-gray-500 leading-8">
-              This project is meant to provide developers with a plug-and-play
-              experience for rapidly developing marketing websites for clients.
-              It includes general website features such as cookies & consent,
-              the latest testing tools and a great CSS library to build your own
-              components with. If you need a more complete solution including
+              This project is meant to provide developers with a plug-and-play experience for
+              rapidly developing marketing websites for clients. It includes general website
+              features such as cookies & consent, the latest testing tools and a great CSS library
+              to build your own components with. If you need a more complete solution including
               multi-tenancy, i18n, and CMS integration, please check out{" "}
-              <a
-                href="https://github.com/UnlyEd/next-right-now"
-                className="underline"
-              >
+              <a href="https://github.com/UnlyEd/next-right-now" className="underline">
                 Next Right Now
               </a>
               , which has heavily inspired this boilerplate.
@@ -42,119 +38,67 @@ export default function Home() {
             <h2>Built with:</h2>
             <ul>
               <li>
-                <a
-                  href="https://reactjs.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
                   React
                 </a>
               </li>
               <li>
-                <a
-                  href="https://nextjs.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
                   Next.js
                 </a>
               </li>
               <li>
-                <a
-                  href="https://react-svgr.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://react-svgr.com/" target="_blank" rel="noopener noreferrer">
                   SVGR
                 </a>
               </li>
               <li>
-                <a
-                  href="https://tailwindcss.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">
                   TailwindCSS
                 </a>
               </li>
               <li>
-                <a
-                  href="https://tailwindui.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://tailwindui.com" target="_blank" rel="noopener noreferrer">
                   Tailwind UI
                 </a>
               </li>
               <li>
-                <a
-                  href="https://fontawesome.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">
                   FontAwesome Icons
                 </a>
               </li>
               <li>
-                <a
-                  href="https://jestjs.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">
                   Jest
                 </a>
               </li>
               <li>
-                <a
-                  href="https://www.cypress.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://www.cypress.io/" target="_blank" rel="noopener noreferrer">
                   Cypress
                 </a>
               </li>
               <li>
-                <a
-                  href="https://sentry.io"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://sentry.io" target="_blank" rel="noopener noreferrer">
                   Sentry
                 </a>
               </li>
               <li>
-                <a
-                  href="https://amplitude.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://amplitude.com/" target="_blank" rel="noopener noreferrer">
                   Amplitude
                 </a>
               </li>
               <li>
-                <a
-                  href="https://eslint.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://eslint.org/" target="_blank" rel="noopener noreferrer">
                   ESLint
                 </a>
               </li>
               <li>
-                <a
-                  href="https://eslint.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://eslint.org/" target="_blank" rel="noopener noreferrer">
                   Prettier
                 </a>
               </li>
               <li>
-                <a
-                  href="https://vercel.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
                   Vercel Deployment
                 </a>
               </li>
@@ -163,8 +107,8 @@ export default function Home() {
             <p>To get a local copy up and running follow these simple steps.</p>
             <h3>Prerequisites</h3>
             <p>
-              This is an example of how to list things you need to use the
-              software and how to install them.
+              This is an example of how to list things you need to use the software and how to
+              install them.
             </p>
             <ul>
               <li>Node</li>
@@ -174,10 +118,7 @@ export default function Home() {
             <ol>
               <li>
                 <p>Clone the boilerplate</p>
-                <code>
-                  git clone
-                  https://github.com/shnparker/nextjs-website-boilerplate.git
-                </code>
+                <code>git clone https://github.com/shnparker/nextjs-website-boilerplate.git</code>
               </li>
               <li>
                 <p>Install dependancies</p>
@@ -186,9 +127,8 @@ export default function Home() {
             </ol>
             <h2>Usage</h2>
             <p>
-              The boilerplate is set up to work seamlessly so that you can just
-              start adding components. The only requirement is to plug in the
-              following customizations:
+              The boilerplate is set up to work seamlessly so that you can just start adding
+              components. The only requirement is to plug in the following customizations:
             </p>
             <ul>
               <li>
@@ -247,12 +187,11 @@ export default function Home() {
               </li>
             </ul>
             <p>
-              I&apos;ve readded Tailwind UI after clearing licensing queries
-              with the creators. The Tailwind UI npm package is public and free,
-              but the premade components are licensed, therefore this project
-              will contain no premade components. If you have not purchased
-              Tailwind UI (which I highly recommend everyone does), you can
-              remove it from your project by following the short{" "}
+              I&apos;ve readded Tailwind UI after clearing licensing queries with the creators. The
+              Tailwind UI npm package is public and free, but the premade components are licensed,
+              therefore this project will contain no premade components. If you have not purchased
+              Tailwind UI (which I highly recommend everyone does), you can remove it from your
+              project by following the short{" "}
               <a
                 href="https://github.com/shnparker/nextjs-website-boilerplate/blob/master/docs/tailwind.md"
                 target="_blank"
@@ -266,8 +205,7 @@ export default function Home() {
             <code>yarn dev</code>
             <h2>Deployment</h2>
             <p>
-              Zero-configuration deployment when deploying Next.js projects to
-              Vercel. See{" "}
+              Zero-configuration deployment when deploying Next.js projects to Vercel. See{" "}
               <a
                 href="https://vercel.com/guides/deploying-nextjs-with-vercel"
                 target="_blank"
@@ -290,9 +228,9 @@ export default function Home() {
             </p>
             <h2>Contributing</h2>
             <p>
-              Contributions are what make the open source community such an
-              amazing place to be learn, inspire, and create. Any contributions
-              you make are <strong>greatly appreciated</strong>.
+              Contributions are what make the open source community such an amazing place to be
+              learn, inspire, and create. Any contributions you make are{" "}
+              <strong>greatly appreciated</strong>.
             </p>
             <ol>
               <li>Fork the Project</li>
@@ -311,18 +249,11 @@ export default function Home() {
               <li>Open a Pull Request</li>
             </ol>
             <h2>License</h2>
-            <p>
-              Distributed under the MIT License. See `LICENSE` for more
-              information.
-            </p>
+            <p>Distributed under the MIT License. See `LICENSE` for more information.</p>
             <h2>Contact</h2>
             <p>
               Shane Parker -{" "}
-              <a
-                href="https://twitter.com/shnparker"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://twitter.com/shnparker" target="_blank" rel="noopener noreferrer">
                 @shnparker
               </a>{" "}
               - <a href="mailto:">shane@sitestack.co.za</a>
@@ -336,9 +267,7 @@ export default function Home() {
             <h2>Acknowledgements</h2>
             <ul>
               <li>
-                <a href="https://github.com/UnlyEd/next-right-now">
-                  Next Right Now
-                </a>
+                <a href="https://github.com/UnlyEd/next-right-now">Next Right Now</a>
               </li>
               <li>
                 <a href="https://github.com/othneildrew/Best-README-Template">

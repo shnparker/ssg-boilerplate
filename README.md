@@ -52,7 +52,6 @@ If you need a more complete solution including multi-tenancy, i18n, and CMS inte
 - [SVGR React Components](https://react-svgr.com/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Tailwind UI](https://tailwindui.com/)
-- [FontAwesome Icons](https://fontawesome.com/)
 - [Jest](https://jestjs.io/)
 - [Cypress](https://www.cypress.io/)
 - [Sentry](https://sentry.io)
@@ -102,7 +101,6 @@ The only requirement is to plug in the following customizations:
 - [SVG Generation][docs-svg]
 - [Tailwind UI][docs-tailwind]
 
-I've readded [Tailwind UI](https://tailwindui.com) after clearing licensing queries with the creators. The Tailwind UI npm package is public and free, but the premade components are licensed, therefore this project will contain no premade components.
 If you have not purchased Tailwind UI (which I highly recommend everyone does), you can remove it from your project by following the short [Tailwind UI Replacement][docs-tailwind] guide.
 
 When everything is set, run the app.

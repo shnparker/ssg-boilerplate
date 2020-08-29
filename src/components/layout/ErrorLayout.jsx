@@ -26,21 +26,17 @@ function ErrorLayout({ error, context }) {
       <h1>Service currently unavailable</h1>
 
       <div>
-        <p>
-          Try to refresh the page. Please contact our support below if the issue
-          persists.
-        </p>
+        <p>Try to refresh the page. Please contact our support below if the issue persists.</p>
       </div>
 
       {process.env.NEXT_PUBLIC_APP_STAGE !== "production" && (
         <div>
           <hr />
           <i>
-            The below &quot;debug info&quot; are only displayed on
-            non-production stages.
+            The below &quot;debug info&quot; are only displayed on non-production stages.
             <br />
-            Note that debug information about the error are also available on
-            the server/browser console.
+            Note that debug information about the error are also available on the server/browser
+            console.
           </i>
 
           <h2>Debug information:</h2>

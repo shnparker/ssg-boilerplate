@@ -9,8 +9,7 @@
 import * as Sentry from "@sentry/node";
 import { isBrowser } from "utils/platform";
 
-const isEnabled =
-  process.env.NODE_ENV !== "test" && process.env.NODE_ENV !== "development";
+const isEnabled = process.env.NODE_ENV !== "test" && process.env.NODE_ENV !== "development";
 
 if (process.env.SENTRY_DSN) {
   Sentry.init({
